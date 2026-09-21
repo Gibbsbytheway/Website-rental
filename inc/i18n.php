@@ -117,6 +117,30 @@ function asteria_translations() {
 			'fr' => 'Retour au site', 'en' => 'Back to site', 'it' => 'Torna al sito',
 			'es' => 'Volver al sitio', 'pt' => 'Voltar ao site', 'de' => 'Zurück zur Website',
 		),
+		'testimonials.eyebrow' => array(
+			'fr' => 'Ils nous font confiance', 'en' => 'They trust us', 'it' => 'Si fidano di noi',
+			'es' => 'Confían en nosotros', 'pt' => 'Confiam em nós', 'de' => 'Sie vertrauen uns',
+		),
+		'testimonials.titre'  => array(
+			'fr' => 'Des voyageurs satisfaits', 'en' => 'Happy guests', 'it' => 'Ospiti soddisfatti',
+			'es' => 'Huéspedes satisfechos', 'pt' => 'Hóspedes satisfeitos', 'de' => 'Zufriedene Gäste',
+		),
+		'why.eyebrow'         => array(
+			'fr' => 'Les petits + de nos logements', 'en' => 'The little extras of our properties', 'it' => 'I piccoli plus dei nostri alloggi',
+			'es' => 'Los pequeños extras de nuestros alojamientos', 'pt' => 'Os pequenos extras dos nossos alojamentos', 'de' => 'Die kleinen Extras unserer Unterkünfte',
+		),
+		'why.titre'           => array(
+			'fr' => 'Pourquoi nous choisir nous ?', 'en' => 'Why choose us?', 'it' => 'Perché scegliere noi?',
+			'es' => '¿Por qué elegirnos?', 'pt' => 'Porque nos escolher?', 'de' => 'Warum uns wählen?',
+		),
+		'faq.eyebrow'         => array(
+			'fr' => 'Vous vous les posez peut-être aussi', 'en' => 'You might be wondering about this too', 'it' => 'Forse te lo stai chiedendo anche tu',
+			'es' => 'Puede que también te lo preguntes', 'pt' => 'Talvez também se pergunte isto', 'de' => 'Das fragen Sie sich vielleicht auch',
+		),
+		'faq.titre'           => array(
+			'fr' => 'Questions fréquentes', 'en' => 'Frequently asked questions', 'it' => 'Domande frequenti',
+			'es' => 'Preguntas frecuentes', 'pt' => 'Perguntas frequentes', 'de' => 'Häufig gestellte Fragen',
+		),
 		'contact.titre'       => array(
 			'fr' => 'Des questions ?', 'en' => 'Any questions?', 'it' => 'Domande?',
 			'es' => '¿Tienes preguntas?', 'pt' => 'Alguma dúvida?', 'de' => 'Fragen?',
