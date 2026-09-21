@@ -20,7 +20,6 @@ function asteria_logement_meta_fields() {
 function asteria_add_logement_meta_boxes() {
 	add_meta_box( 'asteria_logement_details', __( 'Détails du logement', 'asteria-pulsar' ), 'asteria_render_logement_details_box', 'logement', 'normal', 'high' );
 	add_meta_box( 'asteria_logement_equipements', __( 'Équipements (un par ligne)', 'asteria-pulsar' ), 'asteria_render_logement_equipements_box', 'logement', 'normal' );
-	add_meta_box( 'asteria_logement_galerie', __( 'Galerie photos', 'asteria-pulsar' ), 'asteria_render_logement_galerie_box', 'logement', 'side' );
 }
 add_action( 'add_meta_boxes', 'asteria_add_logement_meta_boxes' );
 
@@ -44,17 +43,6 @@ function asteria_render_logement_equipements_box( $post ) {
 	echo '<textarea name="_logement_equipements" rows="8" class="widefat">' . esc_textarea( $value ) . '</textarea>';
 }
 
-function asteria_render_logement_galerie_box( $post ) {
-	$ids = get_post_meta( $post->ID, '_logement_galerie', true );
-	?>
-	<div id="asteria-galerie-wrapper" data-ids="<?php echo esc_attr( $ids ); ?>">
-		<div id="asteria-galerie-preview"></div>
-		<input type="hidden" name="_logement_galerie" id="asteria-galerie-ids" value="<?php echo esc_attr( $ids ); ?>" />
-		<button type="button" class="button" id="asteria-galerie-select"><?php esc_html_e( 'Choisir des photos', 'asteria-pulsar' ); ?></button>
-	</div>
-	<?php
-}
-
 function asteria_save_logement_meta( $post_id ) {
 	if ( ! isset( $_POST['asteria_logement_nonce'] ) || ! wp_verify_nonce( $_POST['asteria_logement_nonce'], 'asteria_save_logement' ) ) {
 		return;
@@ -75,20 +63,5 @@ function asteria_save_logement_meta( $post_id ) {
 	if ( isset( $_POST['_logement_equipements'] ) ) {
 		update_post_meta( $post_id, '_logement_equipements', sanitize_textarea_field( wp_unslash( $_POST['_logement_equipements'] ) ) );
 	}
-
-	if ( isset( $_POST['_logement_galerie'] ) ) {
-		$ids = implode( ',', array_filter( array_map( 'absint', explode( ',', wp_unslash( $_POST['_logement_galerie'] ) ) ) ) );
-		update_post_meta( $post_id, '_logement_galerie', $ids );
-	}
 }
 add_action( 'save_post_logement', 'asteria_save_logement_meta' );
-
-function asteria_logement_admin_assets( $hook ) {
-	global $post_type;
-	if ( 'logement' !== $post_type || ! in_array( $hook, array( 'post.php', 'post-new.php' ), true ) ) {
-		return;
-	}
-	wp_enqueue_media();
-	wp_enqueue_script( 'asteria-admin-galerie', get_template_directory_uri() . '/assets/js/admin-galerie.js', array( 'jquery' ), ASTERIA_THEME_VERSION, true );
-}
-add_action( 'admin_enqueue_scripts', 'asteria_logement_admin_assets' );
