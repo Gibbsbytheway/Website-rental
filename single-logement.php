@@ -65,16 +65,6 @@ while ( have_posts() ) :
 					<p><?php esc_html_e( 'Check-out jusqu\'à', 'asteria-pulsar' ); ?> <strong><?php echo esc_html( $checkout ); ?></strong></p>
 				</div>
 			<?php endif; ?>
-
-			<div class="logement-detail__booking-widget">
-				<h2><?php esc_html_e( 'Réserver ce logement', 'asteria-pulsar' ); ?></h2>
-				<iframe
-					src="<?php echo esc_url( asteria_superhote_rental_url( $superhote_id ) ); ?>"
-					class="superhote-widget"
-					loading="lazy"
-					title="<?php the_title_attribute(); ?>"
-				></iframe>
-			</div>
 		</div>
 
 		<aside class="logement-detail__sidebar">
