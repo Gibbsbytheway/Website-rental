@@ -169,29 +169,6 @@ h2 { font-size: 2rem; }
 .page-hero h1 { letter-spacing: 0.01em; }
 .page-hero p { font-family: var(--font-serif); font-style: italic; font-size: 1.15rem; opacity: 0.85; }
 
-/* Fiche logement (iframe plein écran) */
-body.logement-embed { margin: 0; height: 100%; overflow: hidden; }
-html:has(body.logement-embed) { height: 100%; }
-.logement-embed__iframe {
-	position: fixed;
-	inset: 0;
-	width: 100%;
-	height: 100%;
-	border: 0;
-}
-.logement-embed__back {
-	position: fixed;
-	top: 16px;
-	left: 16px;
-	z-index: 10;
-	background: rgba(28, 26, 23, 0.85);
-	color: #fff;
-	padding: 8px 16px;
-	border-radius: 999px;
-	font-size: 0.85rem;
-}
-.logement-embed__back:hover { background: var(--color-dark); }
-
 /* Logements grid */
 .logements-list { padding: 56px 0; scroll-margin-top: 90px; }
 .logements-grid {
@@ -218,6 +195,39 @@ html:has(body.logement-embed) { height: 100%; }
 .logement-card__meta { color: var(--color-muted); font-size: 0.85rem; margin: 0 0 4px; }
 .logement-card__specs { color: var(--color-muted); font-size: 0.9rem; }
 .logement-card__price { margin-top: 10px; }
+
+/* Logement detail */
+.logement-detail {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	gap: 48px;
+	padding: 40px 0 64px;
+	align-items: start;
+}
+.logement-detail__image { border-radius: var(--radius); overflow: hidden; margin-bottom: 24px; }
+.logement-detail__specs { color: var(--color-muted); margin-bottom: 24px; }
+.logement-detail__amenities ul {
+	list-style: none;
+	padding: 0;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 10px;
+}
+.logement-detail__amenities li::before { content: "✓ "; color: var(--color-accent); }
+
+.booking-card {
+	position: sticky;
+	top: 90px;
+	background: var(--color-surface);
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius);
+	padding: 24px;
+	text-align: center;
+}
+.booking-card__price { font-size: 1.1rem; margin-bottom: 16px; }
+
+.booking-widget { padding: 0 0 64px; scroll-margin-top: 90px; }
+.booking-widget iframe { width: 100%; border: 1px solid var(--color-border); border-radius: var(--radius); }
 
 /* Contact */
 .contact {
@@ -351,5 +361,5 @@ html:has(body.logement-embed) { height: 100%; }
 	.site-nav { display: none; width: 100%; }
 	.site-nav.is-open { display: block; }
 	.site-nav ul { flex-direction: column; gap: 12px; padding: 16px 0; }
-	.contact, .site-footer__inner { grid-template-columns: 1fr; }
+	.contact, .site-footer__inner, .logement-detail { grid-template-columns: 1fr; }
 }

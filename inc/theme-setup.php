@@ -41,14 +41,16 @@ function asteria_google_ads_tag() {
 }
 add_action( 'wp_head', 'asteria_google_ads_tag' );
 
-function asteria_superhote_rental_url( $rental_id ) {
-	$args = array(
-		'lang'   => asteria_current_lang(),
-		'adults' => 1,
-	);
-	if ( ! empty( $rental_id ) ) {
-		$args['tab']      = 'rental';
-		$args['rentalId'] = rawurlencode( $rental_id );
+function asteria_superhote_widget_url( $property_key ) {
+	if ( empty( $property_key ) ) {
+		return '';
 	}
-	return add_query_arg( $args, ASTERIA_SUPERHOTE_URL );
+	$base = sprintf( 'https://connect.superhote.com/integrations/iframes/%s/rentals', ASTERIA_SUPERHOTE_WIDGET_ID );
+	return add_query_arg(
+		array(
+			'property_key' => rawurlencode( $property_key ),
+			'lang'         => asteria_current_lang(),
+		),
+		$base
+	);
 }

@@ -58,6 +58,7 @@ function asteria_theme_activation() {
 			'_logement_checkin'      => '16h00',
 			'_logement_checkout'     => '11h00',
 			'_logement_superhote_id' => '11423762',
+			'_logement_property_key' => 'propertyKeyoSslcRFFCq7Xa4W0ady1IbllL',
 			'_logement_equipements'  => "Check-in autonome\nSupport TEL / SMS\nMénage professionnel\nWifi FIBRE\nSavon et gel douche\nLiterie de qualité\nCuisine équipée\nServiettes fournies",
 		),
 	) );
@@ -75,6 +76,7 @@ function asteria_theme_activation() {
 			'_logement_checkin'      => '16h00',
 			'_logement_checkout'     => '10h00',
 			'_logement_superhote_id' => '11424374',
+			'_logement_property_key' => 'propertyKeyHEy3Jxh1XYDIFlyc0veeT8p8k',
 			'_logement_equipements'  => "Ménage professionnel inclus\nSupport téléphonique & SMS\nWifi haut débit (fibre)\nProduits d'accueil (savon & gel douche)\nLiterie premium\nCuisine entièrement équipée\nLinge de toilette fourni\nLave-linge",
 		),
 	) );

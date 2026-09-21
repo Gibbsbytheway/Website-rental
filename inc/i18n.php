@@ -113,10 +113,6 @@ function asteria_translations() {
 			'fr' => 'À partir de', 'en' => 'From', 'it' => 'A partire da',
 			'es' => 'Desde', 'pt' => 'A partir de', 'de' => 'Ab',
 		),
-		'retour.au_site'      => array(
-			'fr' => 'Retour au site', 'en' => 'Back to site', 'it' => 'Torna al sito',
-			'es' => 'Volver al sitio', 'pt' => 'Voltar ao site', 'de' => 'Zurück zur Website',
-		),
 		'testimonials.eyebrow' => array(
 			'fr' => 'Ils nous font confiance', 'en' => 'They trust us', 'it' => 'Si fidano di noi',
 			'es' => 'Confían en nosotros', 'pt' => 'Confiam em nós', 'de' => 'Sie vertrauen uns',
