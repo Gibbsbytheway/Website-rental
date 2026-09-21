@@ -58,13 +58,3 @@ function asteria_superhote_rental_url( $rental_id ) {
 		ASTERIA_SUPERHOTE_URL
 	);
 }
-
-function asteria_redirect_logement_to_superhote() {
-	if ( ! is_singular( 'logement' ) || is_preview() ) {
-		return;
-	}
-	$superhote_id = get_post_meta( get_the_ID(), '_logement_superhote_id', true );
-	wp_redirect( asteria_superhote_rental_url( $superhote_id ), 302 );
-	exit;
-}
-add_action( 'template_redirect', 'asteria_redirect_logement_to_superhote' );
