@@ -25,7 +25,12 @@ function asteria_enqueue_assets() {
 add_action( 'wp_enqueue_scripts', 'asteria_enqueue_assets' );
 
 function asteria_google_ads_tag() {
-	$ads_id = get_theme_mod( 'asteria_google_ads_id', '' );
+	$ads_id = '';
+	if ( is_singular( 'logement' ) ) {
+		$ads_id = get_post_meta( get_the_ID(), '_logement_google_ads_id', true );
+	} else {
+		$ads_id = get_theme_mod( 'asteria_google_ads_id', '' );
+	}
 	if ( empty( $ads_id ) ) {
 		return;
 	}

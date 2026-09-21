@@ -59,6 +59,7 @@ function asteria_theme_activation() {
 			'_logement_checkout'     => '11h00',
 			'_logement_superhote_id' => '11423762',
 			'_logement_property_key' => 'propertyKeyoSslcRFFCq7Xa4W0ady1IbllL',
+			'_logement_google_ads_id' => 'AW-18078484952',
 			'_logement_equipements'  => "Check-in autonome\nSupport TEL / SMS\nMénage professionnel\nWifi FIBRE\nSavon et gel douche\nLiterie de qualité\nCuisine équipée\nServiettes fournies",
 		),
 	) );
