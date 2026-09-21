@@ -1,14 +1,15 @@
 :root {
-	--color-bg: #faf6f0;
+	--color-bg: #f8f5f0;
 	--color-surface: #ffffff;
-	--color-text: #2b2621;
-	--color-muted: #766e63;
-	--color-accent: #e2572b;
-	--color-accent-dark: #c8461f;
-	--color-dark: #1c1a17;
-	--color-border: #e7ddd0;
-	--radius: 10px;
+	--color-text: #221f1a;
+	--color-muted: #756c5e;
+	--color-accent: #b08d57;
+	--color-accent-dark: #93733f;
+	--color-dark: #14120f;
+	--color-border: #e6ddd0;
+	--radius: 6px;
 	--font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+	--font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
 }
 
 * { box-sizing: border-box; }
@@ -30,21 +31,23 @@ img { max-width: 100%; display: block; }
 	padding: 0 24px;
 }
 
-h1, h2, h3 { line-height: 1.2; font-weight: 600; margin: 0 0 16px; }
-h1 { font-size: 2.4rem; }
-h2 { font-size: 1.6rem; }
+h1, h2 { font-family: var(--font-serif); line-height: 1.15; font-weight: 600; margin: 0 0 16px; }
+h3 { line-height: 1.2; font-weight: 600; margin: 0 0 16px; }
+h1 { font-size: 2.8rem; }
+h2 { font-size: 2rem; }
 
 .btn {
 	display: inline-block;
-	padding: 12px 24px;
-	border-radius: 999px;
+	padding: 12px 26px;
+	border-radius: 2px;
 	font-weight: 600;
+	letter-spacing: 0.03em;
 	border: 1px solid transparent;
 	cursor: pointer;
 }
 .btn--cta {
 	background: var(--color-accent);
-	color: #fff;
+	color: var(--color-dark);
 }
 .btn--cta:hover { background: var(--color-accent-dark); }
 .btn--outline {
@@ -70,7 +73,7 @@ h2 { font-size: 1.6rem; }
 	gap: 24px;
 	padding: 16px 24px;
 }
-.site-logo { font-size: 1.2rem; font-weight: 700; }
+.site-logo { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; letter-spacing: 0.02em; }
 .site-nav ul {
 	display: flex;
 	gap: 28px;
@@ -137,10 +140,10 @@ h2 { font-size: 1.6rem; }
 /* Hero */
 .hero {
 	position: relative;
-	min-height: 420px;
+	min-height: 460px;
 	display: flex;
 	align-items: center;
-	background: linear-gradient(135deg, #3a332b, #1c1a17);
+	background: linear-gradient(135deg, #241f1a, var(--color-dark));
 	color: #fff;
 	text-align: center;
 }
@@ -154,16 +157,17 @@ h2 { font-size: 1.6rem; }
 	z-index: 1;
 	width: 100%;
 }
-.hero__content h1 { font-size: 3rem; margin-bottom: 12px; }
-.hero__content p { font-size: 1.1rem; opacity: 0.9; }
+.hero__content h1 { font-size: 3.4rem; margin-bottom: 14px; letter-spacing: 0.01em; }
+.hero__content p { font-family: var(--font-serif); font-size: 1.3rem; font-style: italic; opacity: 0.9; }
 
 .page-hero {
 	background: var(--color-dark);
 	color: #fff;
-	padding: 64px 0;
+	padding: 72px 0;
 	text-align: center;
 }
-.page-hero p { opacity: 0.85; }
+.page-hero h1 { letter-spacing: 0.01em; }
+.page-hero p { font-family: var(--font-serif); font-style: italic; font-size: 1.15rem; opacity: 0.85; }
 
 /* Fiche logement (iframe plein écran) */
 body.logement-embed { margin: 0; height: 100%; overflow: hidden; }
@@ -248,8 +252,9 @@ html:has(body.logement-embed) { height: 100%; }
 	padding-bottom: 32px;
 	border-bottom: 1px solid rgba(255,255,255,0.08);
 }
-.site-footer a:hover { color: #fff; }
-.site-footer h3 { color: #fff; }
+.site-footer a:hover { color: var(--color-accent); }
+.site-footer h3 { color: #fff; font-weight: 600; }
+.site-footer__brand .site-logo { color: #fff; }
 .site-footer__menu ul { list-style: none; padding: 0; margin: 0; }
 .site-footer__menu li { margin-bottom: 8px; }
 .site-footer__bottom { padding: 20px 0; font-size: 0.85rem; opacity: 0.7; }
@@ -297,7 +302,7 @@ html:has(body.logement-embed) { height: 100%; }
 	height: 36px;
 	border-radius: 50%;
 	background: var(--color-accent);
-	color: #fff;
+	color: var(--color-dark);
 	font-weight: 700;
 	flex-shrink: 0;
 }

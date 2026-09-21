@@ -17,8 +17,9 @@ function asteria_theme_setup() {
 add_action( 'after_setup_theme', 'asteria_theme_setup' );
 
 function asteria_enqueue_assets() {
+	wp_enqueue_style( 'asteria-fonts', 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&display=swap', array(), null );
 	wp_enqueue_style( 'asteria-style', get_stylesheet_uri(), array(), ASTERIA_THEME_VERSION );
-	wp_enqueue_style( 'asteria-main', get_template_directory_uri() . '/assets/css/main.css', array(), ASTERIA_THEME_VERSION );
+	wp_enqueue_style( 'asteria-main', get_template_directory_uri() . '/assets/css/main.css', array( 'asteria-fonts' ), ASTERIA_THEME_VERSION );
 	wp_enqueue_script( 'asteria-main', get_template_directory_uri() . '/assets/js/main.js', array(), ASTERIA_THEME_VERSION, true );
 }
 add_action( 'wp_enqueue_scripts', 'asteria_enqueue_assets' );

@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 define( 'ASTERIA_SUPERHOTE_URL', 'https://connect.superhote.com/website/6a79eeb782528' );
-define( 'ASTERIA_THEME_VERSION', '1.2.0' );
+define( 'ASTERIA_THEME_VERSION', '1.3.0' );
 
 require get_template_directory() . '/inc/i18n.php';
 require get_template_directory() . '/inc/marketing-content.php';
