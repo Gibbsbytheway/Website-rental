@@ -24,29 +24,29 @@ if ( ! defined( 'ABSPATH' ) ) {
 			?>
 		</a>
 
-		<button class="nav-toggle" id="nav-toggle" aria-label="<?php esc_attr_e( 'Ouvrir le menu', 'asteria-pulsar' ); ?>" aria-expanded="false">
+		<button class="nav-toggle" id="nav-toggle" aria-label="<?php echo esc_attr( asteria_t( 'nav.ouvrir_menu' ) ); ?>" aria-expanded="false">
 			<span></span><span></span><span></span>
 		</button>
 
 		<nav class="site-nav" id="site-nav">
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'primary',
-				'container'      => false,
-				'fallback_cb'    => 'asteria_default_menu',
-			) );
-			?>
+			<ul>
+				<li><a href="<?php echo esc_url( home_url( '/logements/' ) ); ?>"><?php echo esc_html( asteria_t( 'nav.logements' ) ); ?></a></li>
+				<li><a href="<?php echo esc_url( home_url( '/a-propos/' ) ); ?>"><?php echo esc_html( asteria_t( 'nav.a_propos' ) ); ?></a></li>
+				<li><a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><?php echo esc_html( asteria_t( 'nav.contact' ) ); ?></a></li>
+			</ul>
+
+			<div class="lang-switcher">
+				<?php foreach ( asteria_supported_languages() as $code => $label ) : ?>
+					<a
+						href="<?php echo esc_url( asteria_lang_url( $code ) ); ?>"
+						class="lang-switcher__item<?php echo $code === asteria_current_lang() ? ' is-active' : ''; ?>"
+						lang="<?php echo esc_attr( $code ); ?>"
+						title="<?php echo esc_attr( $label ); ?>"
+					><?php echo esc_html( strtoupper( $code ) ); ?></a>
+				<?php endforeach; ?>
+			</div>
 		</nav>
 
-		<a class="btn btn--cta" href="<?php echo esc_url( home_url( '/#logements' ) ); ?>"><?php esc_html_e( 'Réserver', 'asteria-pulsar' ); ?></a>
+		<a class="btn btn--cta" href="<?php echo esc_url( home_url( '/#logements' ) ); ?>"><?php echo esc_html( asteria_t( 'nav.reserver' ) ); ?></a>
 	</div>
 </header>
-
-<?php
-function asteria_default_menu() {
-	echo '<ul>';
-	echo '<li><a href="' . esc_url( home_url( '/logements/' ) ) . '">' . esc_html__( 'Nos logements', 'asteria-pulsar' ) . '</a></li>';
-	echo '<li><a href="' . esc_url( home_url( '/a-propos/' ) ) . '">' . esc_html__( 'À propos', 'asteria-pulsar' ) . '</a></li>';
-	echo '<li><a href="' . esc_url( home_url( '/contact/' ) ) . '">' . esc_html__( 'Contact', 'asteria-pulsar' ) . '</a></li>';
-	echo '</ul>';
-}

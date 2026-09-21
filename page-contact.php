@@ -16,19 +16,19 @@ $status   = isset( $_GET['contact'] ) ? sanitize_key( $_GET['contact'] ) : '';
 
 <section class="page-hero">
 	<div class="container">
-		<h1><?php esc_html_e( 'Des questions ?', 'asteria-pulsar' ); ?></h1>
-		<p><?php esc_html_e( 'Discutons !', 'asteria-pulsar' ); ?></p>
+		<h1><?php echo esc_html( asteria_t( 'contact.titre' ) ); ?></h1>
+		<p><?php echo esc_html( asteria_t( 'contact.sous_titre' ) ); ?></p>
 	</div>
 </section>
 
 <section class="contact container">
 	<div class="contact__form">
-		<h2><?php esc_html_e( 'Formulaire de contact', 'asteria-pulsar' ); ?></h2>
+		<h2><?php echo esc_html( asteria_t( 'contact.formulaire' ) ); ?></h2>
 
 		<?php if ( 'success' === $status ) : ?>
-			<p class="notice notice--success"><?php esc_html_e( 'Votre message a bien été envoyé, merci !', 'asteria-pulsar' ); ?></p>
+			<p class="notice notice--success"><?php echo esc_html( asteria_t( 'contact.succes' ) ); ?></p>
 		<?php elseif ( 'error' === $status ) : ?>
-			<p class="notice notice--error"><?php esc_html_e( 'Merci de vérifier les champs du formulaire.', 'asteria-pulsar' ); ?></p>
+			<p class="notice notice--error"><?php echo esc_html( asteria_t( 'contact.erreur' ) ); ?></p>
 		<?php endif; ?>
 
 		<form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>">
@@ -37,36 +37,36 @@ $status   = isset( $_GET['contact'] ) ? sanitize_key( $_GET['contact'] ) : '';
 
 			<div class="form-row form-row--split">
 				<div>
-					<label for="prenom"><?php esc_html_e( 'Prénom', 'asteria-pulsar' ); ?> *</label>
+					<label for="prenom"><?php echo esc_html( asteria_t( 'contact.prenom' ) ); ?> *</label>
 					<input type="text" id="prenom" name="prenom" required />
 				</div>
 				<div>
-					<label for="nom"><?php esc_html_e( 'Nom', 'asteria-pulsar' ); ?> *</label>
+					<label for="nom"><?php echo esc_html( asteria_t( 'contact.nom' ) ); ?> *</label>
 					<input type="text" id="nom" name="nom" required />
 				</div>
 			</div>
 
 			<div class="form-row">
-				<label for="email">Email *</label>
+				<label for="email"><?php echo esc_html( asteria_t( 'contact.email' ) ); ?> *</label>
 				<input type="email" id="email" name="email" required />
 			</div>
 
 			<div class="form-row">
-				<label for="sujet"><?php esc_html_e( 'Sujet', 'asteria-pulsar' ); ?> *</label>
+				<label for="sujet"><?php echo esc_html( asteria_t( 'contact.sujet' ) ); ?> *</label>
 				<input type="text" id="sujet" name="sujet" required />
 			</div>
 
 			<div class="form-row">
-				<label for="message">Message *</label>
+				<label for="message"><?php echo esc_html( asteria_t( 'contact.message' ) ); ?> *</label>
 				<textarea id="message" name="message" rows="6" required></textarea>
 			</div>
 
-			<button type="submit" class="btn btn--cta"><?php esc_html_e( 'Envoyer', 'asteria-pulsar' ); ?></button>
+			<button type="submit" class="btn btn--cta"><?php echo esc_html( asteria_t( 'contact.envoyer' ) ); ?></button>
 		</form>
 	</div>
 
 	<aside class="contact__sidebar">
-		<p><?php esc_html_e( 'Ou contactez-nous directement par téléphone ou email en cliquant sur les boutons ci-dessous :', 'asteria-pulsar' ); ?></p>
+		<p><?php echo esc_html( asteria_t( 'contact.ou_contacter' ) ); ?></p>
 		<a class="btn btn--outline" href="tel:<?php echo esc_attr( preg_replace( '/\s+/', '', $phone ) ); ?>"><?php echo esc_html( $phone ); ?></a>
 		<a class="btn btn--outline" href="mailto:<?php echo esc_attr( $email ); ?>"><?php echo esc_html( $email ); ?></a>
 		<p class="contact__hours"><?php echo esc_html( $horaires ); ?></p>

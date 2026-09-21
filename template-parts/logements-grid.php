@@ -33,11 +33,11 @@ $logements = new WP_Query( array(
 				<h3><?php the_title(); ?></h3>
 				<?php if ( $chambres || $lits || $voyageurs ) : ?>
 					<p class="logement-card__specs">
-						<?php echo esc_html( trim( sprintf( '%s chambres · %s lits · %s voyageurs', $chambres, $lits, $voyageurs ) ) ); ?>
+						<?php echo esc_html( sprintf( asteria_t( 'card.specs' ), $chambres, $lits, $voyageurs ) ); ?>
 					</p>
 				<?php endif; ?>
 				<?php if ( $prix ) : ?>
-					<p class="logement-card__price"><?php esc_html_e( 'À partir de', 'asteria-pulsar' ); ?> <strong><?php echo esc_html( $prix ); ?> €</strong></p>
+					<p class="logement-card__price"><?php echo esc_html( asteria_t( 'card.a_partir_de' ) ); ?> <strong><?php echo esc_html( $prix ); ?> €</strong></p>
 				<?php endif; ?>
 			</div>
 		</a>

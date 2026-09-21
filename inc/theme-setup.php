@@ -13,11 +13,6 @@ function asteria_theme_setup() {
 		'flex-width'  => true,
 	) );
 	add_theme_support( 'html5', array( 'search-form', 'comment-form', 'gallery', 'caption' ) );
-
-	register_nav_menus( array(
-		'primary' => __( 'Menu principal', 'asteria-pulsar' ),
-		'footer'  => __( 'Menu pied de page', 'asteria-pulsar' ),
-	) );
 }
 add_action( 'after_setup_theme', 'asteria_theme_setup' );
 
@@ -46,15 +41,13 @@ function asteria_google_ads_tag() {
 add_action( 'wp_head', 'asteria_google_ads_tag' );
 
 function asteria_superhote_rental_url( $rental_id ) {
-	if ( empty( $rental_id ) ) {
-		return ASTERIA_SUPERHOTE_URL;
-	}
-	return add_query_arg(
-		array(
-			'tab'      => 'rental',
-			'rentalId' => rawurlencode( $rental_id ),
-			'adults'   => 1,
-		),
-		ASTERIA_SUPERHOTE_URL
+	$args = array(
+		'lang'   => asteria_current_lang(),
+		'adults' => 1,
 	);
+	if ( ! empty( $rental_id ) ) {
+		$args['tab']      = 'rental';
+		$args['rentalId'] = rawurlencode( $rental_id );
+	}
+	return add_query_arg( $args, ASTERIA_SUPERHOTE_URL );
 }

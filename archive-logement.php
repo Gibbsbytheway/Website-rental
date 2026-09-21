@@ -8,7 +8,7 @@ get_header();
 
 <section class="page-hero">
 	<div class="container">
-		<h1><?php esc_html_e( 'Nos logements', 'asteria-pulsar' ); ?></h1>
+		<h1><?php echo esc_html( asteria_t( 'logements.titre' ) ); ?></h1>
 	</div>
 </section>
 

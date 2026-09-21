@@ -10,12 +10,12 @@ get_header();
 	<div class="hero__overlay"></div>
 	<div class="container hero__content">
 		<h1><?php bloginfo( 'name' ); ?></h1>
-		<p><?php bloginfo( 'description' ); ?></p>
+		<p><?php echo esc_html( asteria_t( 'hero.tagline' ) ); ?></p>
 	</div>
 </section>
 
 <section class="logements-list container" id="logements">
-	<h2><?php esc_html_e( 'Nos logements', 'asteria-pulsar' ); ?></h2>
+	<h2><?php echo esc_html( asteria_t( 'logements.titre' ) ); ?></h2>
 
 	<?php get_template_part( 'template-parts/logements-grid' ); ?>
 </section>

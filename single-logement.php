@@ -18,7 +18,7 @@ while ( have_posts() ) :
 <body <?php body_class( 'logement-embed' ); ?>>
 <?php wp_body_open(); ?>
 
-<a class="logement-embed__back" href="<?php echo esc_url( home_url( '/' ) ); ?>">&larr; <?php esc_html_e( 'Retour au site', 'asteria-pulsar' ); ?></a>
+<a class="logement-embed__back" href="<?php echo esc_url( home_url( '/' ) ); ?>">&larr; <?php echo esc_html( asteria_t( 'retour.au_site' ) ); ?></a>
 <iframe
 	src="<?php echo esc_url( asteria_superhote_rental_url( $superhote_id ) ); ?>"
 	class="logement-embed__iframe"
