@@ -63,8 +63,8 @@ function asteria_theme_activation() {
 	) );
 
 	asteria_seed_logement( array(
-		'title'   => 'La Villa Fleury des Horizons — Standing, Piscine & Chambres Thématiques (12-16 pers)',
-		'content' => "Bienvenue à La Villa Fleury des Horizons, une demeure d'exception de grand standing située à Thouars. Établissement pensé pour les séjours haut de gamme en famille, entre amis ou pour des événements professionnels, cette propriété unique allie espaces intimistes, une décoration soignée et un aménagement idéal d'accueil.",
+		'title'   => 'Villa Asteria — Thouars',
+		'content' => "Bienvenue à la Villa Asteria, une demeure d'exception de grand standing située à Thouars. Établissement pensé pour les séjours haut de gamme en famille, entre amis ou pour des événements professionnels, cette propriété unique allie espaces intimistes, une décoration soignée et un aménagement idéal d'accueil.",
 		'meta'    => array(
 			'_logement_adresse'      => '5 Rue des Fleury',
 			'_logement_ville'        => '79100 Thouars',
