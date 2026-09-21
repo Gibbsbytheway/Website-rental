@@ -11,7 +11,7 @@ $horaires = get_theme_mod( 'asteria_horaires', 'Disponible 7j/7 de 9h00 à 22h00
 <section class="cta-banner">
 	<div class="container cta-banner__inner">
 		<p><?php esc_html_e( 'Prêt à passer un excellent séjour ?', 'asteria-pulsar' ); ?></p>
-		<a class="btn btn--cta" href="<?php echo esc_url( home_url( '/logements/' ) ); ?>"><?php esc_html_e( 'Réserver maintenant', 'asteria-pulsar' ); ?></a>
+		<a class="btn btn--cta" href="<?php echo esc_url( home_url( '/#logements' ) ); ?>"><?php esc_html_e( 'Réserver maintenant', 'asteria-pulsar' ); ?></a>
 	</div>
 </section>
 

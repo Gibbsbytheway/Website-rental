@@ -147,7 +147,7 @@ html:has(body.logement-embed) { height: 100%; }
 .logement-embed__back:hover { background: var(--color-dark); }
 
 /* Logements grid */
-.logements-list { padding: 56px 0; }
+.logements-list { padding: 56px 0; scroll-margin-top: 90px; }
 .logements-grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));

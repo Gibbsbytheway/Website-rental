@@ -38,7 +38,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			?>
 		</nav>
 
-		<a class="btn btn--cta" href="<?php echo esc_url( home_url( '/logements/' ) ); ?>"><?php esc_html_e( 'Réserver', 'asteria-pulsar' ); ?></a>
+		<a class="btn btn--cta" href="<?php echo esc_url( home_url( '/#logements' ) ); ?>"><?php esc_html_e( 'Réserver', 'asteria-pulsar' ); ?></a>
 	</div>
 </header>
 

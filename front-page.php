@@ -14,7 +14,7 @@ get_header();
 	</div>
 </section>
 
-<section class="logements-list container">
+<section class="logements-list container" id="logements">
 	<h2><?php esc_html_e( 'Nos logements', 'asteria-pulsar' ); ?></h2>
 
 	<?php get_template_part( 'template-parts/logements-grid' ); ?>
