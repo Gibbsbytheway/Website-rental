@@ -58,11 +58,3 @@ function asteria_superhote_rental_url( $rental_id ) {
 		ASTERIA_SUPERHOTE_URL
 	);
 }
-
-function asteria_superhote_rentals_iframe_url() {
-	$iframe_id = get_theme_mod( 'asteria_superhote_iframe_id', '4463e247-f953-426b-a1e4-07dfb4a0204e' );
-	if ( empty( $iframe_id ) ) {
-		return '';
-	}
-	return sprintf( 'https://connect.superhote.com/integrations/iframes/%s/rentals?lang=fr', rawurlencode( $iframe_id ) );
-}

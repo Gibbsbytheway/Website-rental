@@ -15,7 +15,6 @@ function asteria_customize_register( $wp_customize ) {
 		'asteria_horaires'           => array( 'label' => __( 'Disponibilité', 'asteria-pulsar' ), 'default' => 'Disponible 7j/7 de 9h00 à 22h00' ),
 		'asteria_google_ads_id'      => array( 'label' => __( 'ID balise Google Ads (AW-XXXXXXXXX)', 'asteria-pulsar' ), 'default' => '' ),
 		'asteria_google_ads_label'   => array( 'label' => __( 'Label de conversion Google Ads', 'asteria-pulsar' ), 'default' => '' ),
-		'asteria_superhote_iframe_id' => array( 'label' => __( 'ID iframe Superhôte (liste des logements)', 'asteria-pulsar' ), 'default' => '4463e247-f953-426b-a1e4-07dfb4a0204e' ),
 	);
 
 	foreach ( $fields as $id => $field ) {
