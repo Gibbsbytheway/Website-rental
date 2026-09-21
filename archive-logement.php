@@ -20,6 +20,8 @@ $iframe_url = asteria_superhote_rentals_iframe_url();
 			src="<?php echo esc_url( $iframe_url ); ?>"
 			class="superhote-rentals-iframe"
 			id="booking-engine-rentals"
+			width="100%"
+			height="1500"
 			loading="lazy"
 			title="<?php esc_attr_e( 'Nos logements disponibles', 'asteria-pulsar' ); ?>"
 		></iframe>
