@@ -28,57 +28,8 @@ while ( have_posts() ) :
 		</div>
 	</section>
 
-	<section class="logement-detail container">
-		<div class="logement-detail__main">
-			<?php if ( has_post_thumbnail() ) : ?>
-				<div class="logement-detail__image"><?php the_post_thumbnail( 'large' ); ?></div>
-			<?php endif; ?>
-
-			<?php if ( $voyageurs || $chambres || $lits ) : ?>
-				<p class="logement-detail__specs">
-					<?php echo esc_html( sprintf( asteria_t( 'card.specs' ), $chambres, $lits, $voyageurs ) ); ?>
-				</p>
-			<?php endif; ?>
-
-			<div class="logement-detail__description">
-				<?php the_content(); ?>
-			</div>
-
-			<?php if ( $equipements ) : ?>
-				<div class="logement-detail__amenities">
-					<h2><?php esc_html_e( 'Ce que propose ce logement', 'asteria-pulsar' ); ?></h2>
-					<ul>
-						<?php foreach ( array_filter( array_map( 'trim', explode( "\n", $equipements ) ) ) as $item ) : ?>
-							<li><?php echo esc_html( $item ); ?></li>
-						<?php endforeach; ?>
-					</ul>
-				</div>
-			<?php endif; ?>
-
-			<?php if ( $checkin || $checkout ) : ?>
-				<div class="logement-detail__horaires">
-					<h2><?php esc_html_e( 'Horaires', 'asteria-pulsar' ); ?></h2>
-					<p><?php esc_html_e( 'Check-in à partir de', 'asteria-pulsar' ); ?> <strong><?php echo esc_html( $checkin ); ?></strong></p>
-					<p><?php esc_html_e( 'Check-out jusqu\'à', 'asteria-pulsar' ); ?> <strong><?php echo esc_html( $checkout ); ?></strong></p>
-				</div>
-			<?php endif; ?>
-		</div>
-
-		<aside class="logement-detail__sidebar">
-			<div class="booking-card">
-				<?php if ( $prix ) : ?>
-					<p class="booking-card__price"><?php echo esc_html( asteria_t( 'card.a_partir_de' ) ); ?> <strong><?php echo esc_html( $prix ); ?> €</strong></p>
-				<?php endif; ?>
-				<?php if ( $widget_url ) : ?>
-					<a class="btn btn--cta btn--block" href="#booking"><?php echo esc_html( asteria_t( 'nav.reserver' ) ); ?></a>
-				<?php endif; ?>
-			</div>
-		</aside>
-	</section>
-
 	<?php if ( $widget_url ) : ?>
-		<section class="booking-widget container" id="booking">
-			<h2><?php echo esc_html( asteria_t( 'nav.reserver' ) ); ?></h2>
+		<section class="booking-widget container">
 			<iframe
 				src="<?php echo esc_url( $widget_url ); ?>"
 				id="booking-rental"
@@ -87,6 +38,51 @@ while ( have_posts() ) :
 				loading="lazy"
 				title="<?php the_title_attribute(); ?>"
 			></iframe>
+		</section>
+	<?php else : ?>
+		<section class="logement-detail container">
+			<div class="logement-detail__main">
+				<?php if ( has_post_thumbnail() ) : ?>
+					<div class="logement-detail__image"><?php the_post_thumbnail( 'large' ); ?></div>
+				<?php endif; ?>
+
+				<?php if ( $voyageurs || $chambres || $lits ) : ?>
+					<p class="logement-detail__specs">
+						<?php echo esc_html( sprintf( asteria_t( 'card.specs' ), $chambres, $lits, $voyageurs ) ); ?>
+					</p>
+				<?php endif; ?>
+
+				<div class="logement-detail__description">
+					<?php the_content(); ?>
+				</div>
+
+				<?php if ( $equipements ) : ?>
+					<div class="logement-detail__amenities">
+						<h2><?php esc_html_e( 'Ce que propose ce logement', 'asteria-pulsar' ); ?></h2>
+						<ul>
+							<?php foreach ( array_filter( array_map( 'trim', explode( "\n", $equipements ) ) ) as $item ) : ?>
+								<li><?php echo esc_html( $item ); ?></li>
+							<?php endforeach; ?>
+						</ul>
+					</div>
+				<?php endif; ?>
+
+				<?php if ( $checkin || $checkout ) : ?>
+					<div class="logement-detail__horaires">
+						<h2><?php esc_html_e( 'Horaires', 'asteria-pulsar' ); ?></h2>
+						<p><?php esc_html_e( 'Check-in à partir de', 'asteria-pulsar' ); ?> <strong><?php echo esc_html( $checkin ); ?></strong></p>
+						<p><?php esc_html_e( 'Check-out jusqu\'à', 'asteria-pulsar' ); ?> <strong><?php echo esc_html( $checkout ); ?></strong></p>
+					</div>
+				<?php endif; ?>
+			</div>
+
+			<aside class="logement-detail__sidebar">
+				<div class="booking-card">
+					<?php if ( $prix ) : ?>
+						<p class="booking-card__price"><?php echo esc_html( asteria_t( 'card.a_partir_de' ) ); ?> <strong><?php echo esc_html( $prix ); ?> €</strong></p>
+					<?php endif; ?>
+				</div>
+			</aside>
 		</section>
 	<?php endif; ?>
 
