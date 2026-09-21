@@ -35,17 +35,32 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<li><a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><?php echo esc_html( asteria_t( 'nav.contact' ) ); ?></a></li>
 			</ul>
 
-			<div class="lang-switcher">
-				<?php foreach ( asteria_supported_languages() as $code => $label ) : ?>
-					<a
-						href="<?php echo esc_url( asteria_lang_url( $code ) ); ?>"
-						class="lang-switcher__item<?php echo $code === asteria_current_lang() ? ' is-active' : ''; ?>"
-						lang="<?php echo esc_attr( $code ); ?>"
-						title="<?php echo esc_attr( $label ); ?>"
-					><?php echo esc_html( strtoupper( $code ) ); ?></a>
-				<?php endforeach; ?>
-			</div>
 		</nav>
+
+		<?php
+		$asteria_languages = asteria_supported_languages();
+		$asteria_current   = asteria_current_lang();
+		?>
+		<div class="lang-switcher" id="lang-switcher">
+			<button type="button" class="lang-switcher__toggle" id="lang-switcher-toggle" aria-expanded="false" aria-haspopup="true">
+				<span class="lang-switcher__flag"><?php echo esc_html( $asteria_languages[ $asteria_current ]['flag'] ); ?></span>
+				<span class="lang-switcher__caret" aria-hidden="true">▾</span>
+			</button>
+			<ul class="lang-switcher__menu" id="lang-switcher-menu">
+				<?php foreach ( $asteria_languages as $code => $lang ) : ?>
+					<li>
+						<a
+							href="<?php echo esc_url( asteria_lang_url( $code ) ); ?>"
+							class="lang-switcher__item<?php echo $code === $asteria_current ? ' is-active' : ''; ?>"
+							lang="<?php echo esc_attr( $code ); ?>"
+						>
+							<span class="lang-switcher__flag"><?php echo esc_html( $lang['flag'] ); ?></span>
+							<?php echo esc_html( $lang['label'] ); ?>
+						</a>
+					</li>
+				<?php endforeach; ?>
+			</ul>
+		</div>
 
 		<a class="btn btn--cta" href="<?php echo esc_url( home_url( '/#logements' ) ); ?>"><?php echo esc_html( asteria_t( 'nav.reserver' ) ); ?></a>
 	</div>

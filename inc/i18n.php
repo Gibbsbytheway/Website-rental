@@ -5,12 +5,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 function asteria_supported_languages() {
 	return array(
-		'fr' => 'Français',
-		'en' => 'English',
-		'it' => 'Italiano',
-		'es' => 'Español',
-		'pt' => 'Português',
-		'de' => 'Deutsch',
+		'fr' => array( 'label' => 'Français', 'flag' => '🇫🇷' ),
+		'en' => array( 'label' => 'English', 'flag' => '🇬🇧' ),
+		'it' => array( 'label' => 'Italiano', 'flag' => '🇮🇹' ),
+		'es' => array( 'label' => 'Español', 'flag' => '🇪🇸' ),
+		'pt' => array( 'label' => 'Português', 'flag' => '🇵🇹' ),
+		'de' => array( 'label' => 'Deutsch', 'flag' => '🇩🇪' ),
 	);
 }
 

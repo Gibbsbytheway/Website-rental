@@ -92,15 +92,47 @@ h2 { font-size: 1.6rem; }
 	background: var(--color-text);
 }
 
-.lang-switcher {
+.lang-switcher { position: relative; }
+.lang-switcher__toggle {
 	display: flex;
-	gap: 8px;
-	font-size: 0.78rem;
-	color: var(--color-muted);
+	align-items: center;
+	gap: 6px;
+	background: var(--color-bg);
+	border: 1px solid var(--color-border);
+	border-radius: 999px;
+	padding: 6px 10px;
+	cursor: pointer;
+	font-size: 1rem;
 }
-.lang-switcher__item { padding: 2px 4px; }
+.lang-switcher__flag { font-size: 1.1rem; line-height: 1; }
+.lang-switcher__caret { font-size: 0.7rem; color: var(--color-muted); }
+.lang-switcher__menu {
+	display: none;
+	position: absolute;
+	top: calc(100% + 8px);
+	right: 0;
+	background: var(--color-surface);
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius);
+	box-shadow: 0 12px 28px rgba(28, 26, 23, 0.12);
+	list-style: none;
+	margin: 0;
+	padding: 6px;
+	min-width: 160px;
+	z-index: 30;
+}
+.lang-switcher.is-open .lang-switcher__menu { display: block; }
+.lang-switcher__item {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 8px 10px;
+	border-radius: 6px;
+	font-size: 0.9rem;
+	white-space: nowrap;
+}
+.lang-switcher__item:hover { background: var(--color-bg); }
 .lang-switcher__item.is-active { color: var(--color-accent); font-weight: 700; }
-.lang-switcher__item:hover { color: var(--color-text); }
 
 /* Hero */
 .hero {
