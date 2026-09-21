@@ -197,19 +197,6 @@ html:has(body.logement-embed) { height: 100%; }
 .contact__sidebar .btn--outline { display: block; }
 .contact__hours { color: var(--color-muted); margin-top: 12px; }
 
-/* CTA banner */
-.cta-banner { background: var(--color-accent); color: #fff; padding: 24px 0; }
-.cta-banner__inner {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	gap: 16px;
-	flex-wrap: wrap;
-}
-.cta-banner__inner p { margin: 0; font-weight: 600; font-size: 1.1rem; }
-.cta-banner .btn--cta { background: #fff; color: var(--color-accent); }
-.cta-banner .btn--cta:hover { background: #f2f2f2; }
-
 /* Footer */
 .site-footer { background: var(--color-dark); color: #d8d2c9; padding: 48px 0 0; }
 .site-footer__inner {
