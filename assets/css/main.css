@@ -66,6 +66,8 @@ h2 { font-size: 2rem; }
 	top: 0;
 	z-index: 20;
 }
+/* Pages logement : le bandeau défile avec la page pour libérer l'iframe de réservation */
+.single-logement .site-header { position: relative; }
 .site-header__inner {
 	display: flex;
 	align-items: center;
