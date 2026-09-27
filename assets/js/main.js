@@ -4,11 +4,60 @@
 	var toggle = document.getElementById( 'nav-toggle' );
 	var nav = document.getElementById( 'site-nav' );
 
+	var header = document.querySelector( '.site-header' );
+	var cineHome = document.body.classList.contains( 'has-cine-hero' );
+
+	function updateHeader() {
+		if ( ! cineHome || ! header ) {
+			return;
+		}
+		var solid = window.scrollY > 40 || ( nav && nav.classList.contains( 'is-open' ) );
+		header.classList.toggle( 'is-solid', solid );
+	}
+
 	if ( toggle && nav ) {
 		toggle.addEventListener( 'click', function() {
 			var isOpen = nav.classList.toggle( 'is-open' );
 			toggle.setAttribute( 'aria-expanded', isOpen ? 'true' : 'false' );
+			updateHeader();
 		} );
+	}
+
+	if ( cineHome ) {
+		window.addEventListener( 'scroll', updateHeader, { passive: true } );
+		updateHeader();
+	}
+
+	var cine = document.getElementById( 'cine' );
+	var reduceMotion = window.matchMedia( '(prefers-reduced-motion: reduce)' ).matches;
+
+	if ( cine && ! reduceMotion ) {
+		var slides = cine.querySelectorAll( '.cine-slide' );
+		var bars = cine.querySelectorAll( '.cine-progress span' );
+		var place = document.getElementById( 'cine-place' );
+		var current = 0;
+
+		var next = function() {
+			slides.forEach( function( s ) { s.classList.remove( 'was-on' ); } );
+			slides[ current ].classList.remove( 'is-on' );
+			slides[ current ].classList.add( 'was-on' );
+			bars[ current ].classList.remove( 'is-on' );
+			current = ( current + 1 ) % slides.length;
+			slides[ current ].classList.add( 'is-on' );
+			void bars[ current ].offsetWidth;
+			bars[ current ].classList.add( 'is-on' );
+			if ( place ) {
+				place.textContent = slides[ current ].getAttribute( 'data-place' );
+			}
+		};
+
+		if ( slides.length > 1 ) {
+			setInterval( function() {
+				if ( ! document.hidden ) {
+					next();
+				}
+			}, 7000 );
+		}
 	}
 
 	var langSwitcher = document.getElementById( 'lang-switcher' );

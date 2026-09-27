@@ -6,13 +6,45 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header();
 ?>
 
-<section class="hero">
-	<div class="hero__overlay"></div>
-	<div class="container hero__content">
-		<h1><?php bloginfo( 'name' ); ?></h1>
-		<p><?php echo esc_html( asteria_t( 'hero.tagline' ) ); ?></p>
-	</div>
-</section>
+<?php if ( asteria_is_cinematic_home() ) : ?>
+	<?php $asteria_slides = asteria_hero_slides(); ?>
+	<section class="cine" id="cine">
+		<?php foreach ( $asteria_slides as $i => $slide ) : ?>
+			<figure class="cine-slide<?php echo 0 === $i ? ' is-on' : ''; ?>" style="--o: <?php echo esc_attr( $slide['origin'] ); ?>" data-place="<?php echo esc_attr( $slide['place'] ); ?>">
+				<img
+					src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/hero/' . $slide['file'] ); ?>"
+					alt="<?php echo esc_attr( $slide['place'] ); ?>"
+					<?php echo 0 === $i ? 'fetchpriority="high"' : 'loading="lazy"'; ?>
+				/>
+			</figure>
+		<?php endforeach; ?>
+		<div class="cine-shade"></div>
+		<div class="container cine-inner">
+			<div class="cine-copy">
+				<p class="cine-kicker">Massy · Thouars</p>
+				<h1 class="cine-title"><?php bloginfo( 'name' ); ?></h1>
+				<p class="cine-tag"><?php echo esc_html( asteria_t( 'hero.tagline' ) ); ?></p>
+				<a class="btn btn--cta" href="#logements"><?php echo esc_html( asteria_t( 'hero.cta' ) ); ?></a>
+			</div>
+			<div class="cine-meta">
+				<div class="cine-progress" aria-hidden="true">
+					<?php foreach ( $asteria_slides as $i => $slide ) : ?>
+						<span<?php echo 0 === $i ? ' class="is-on"' : ''; ?>></span>
+					<?php endforeach; ?>
+				</div>
+				<p class="cine-place" id="cine-place" aria-live="polite"><?php echo esc_html( $asteria_slides[0]['place'] ); ?></p>
+			</div>
+		</div>
+	</section>
+<?php else : ?>
+	<section class="hero">
+		<div class="hero__overlay"></div>
+		<div class="container hero__content">
+			<h1><?php bloginfo( 'name' ); ?></h1>
+			<p><?php echo esc_html( asteria_t( 'hero.tagline' ) ); ?></p>
+		</div>
+	</section>
+<?php endif; ?>
 
 <section class="logements-list container" id="logements">
 	<h2><?php echo esc_html( asteria_t( 'logements.titre' ) ); ?></h2>

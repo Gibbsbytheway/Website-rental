@@ -356,7 +356,173 @@ h2 { font-size: 2rem; }
 .faq-item[open] summary::after { content: "−"; }
 .faq-item p { color: var(--color-muted); margin: 12px 0 0; }
 
+/* Accueil Cinématique */
+.has-cine-hero .site-header {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	background: transparent;
+	border-bottom-color: transparent;
+	color: #fff;
+	transition: background-color .4s ease, color .4s ease, border-color .4s ease;
+}
+.admin-bar.has-cine-hero .site-header { top: 32px; }
+.has-cine-hero .site-header .nav-toggle span { background: currentColor; }
+.has-cine-hero .site-header .lang-switcher__toggle {
+	background: rgba(255, 255, 255, .12);
+	border-color: rgba(255, 255, 255, .35);
+	color: inherit;
+}
+.has-cine-hero .site-header .lang-switcher__caret { color: inherit; }
+.has-cine-hero .site-header .lang-switcher__menu { color: var(--color-text); }
+.has-cine-hero .site-header.is-solid {
+	background: var(--color-surface);
+	border-bottom-color: var(--color-border);
+	color: var(--color-text);
+}
+.has-cine-hero .site-header.is-solid .lang-switcher__toggle {
+	background: var(--color-bg);
+	border-color: var(--color-border);
+}
+
+.cine {
+	position: relative;
+	height: 100svh;
+	min-height: 540px;
+	max-height: 960px;
+	overflow: hidden;
+	color: #fff;
+	background: var(--color-dark);
+}
+.cine-slide {
+	position: absolute;
+	inset: 0;
+	margin: 0;
+	opacity: 0;
+	transition: opacity 1.8s ease;
+}
+.cine-slide.is-on { opacity: 1; }
+.cine-slide img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: var(--o, 50% 50%);
+	transform-origin: var(--o, 50% 50%);
+}
+.cine-slide.is-on img,
+.cine-slide.was-on img { animation: cine-kenburns 9s ease-out both; }
+@keyframes cine-kenburns {
+	from { transform: scale(1.14); }
+	to { transform: scale(1); }
+}
+.cine-shade {
+	position: absolute;
+	inset: 0;
+	background:
+		linear-gradient(180deg, rgba(10, 8, 6, .55) 0%, rgba(10, 8, 6, 0) 26%),
+		linear-gradient(0deg, rgba(10, 8, 6, .8) 0%, rgba(10, 8, 6, .15) 55%, rgba(10, 8, 6, 0) 75%);
+}
+.cine-inner {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: clamp(28px, 6vh, 64px);
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	gap: 24px;
+	flex-wrap: wrap;
+}
+.cine-copy { display: grid; gap: 14px; max-width: 640px; }
+.cine-kicker {
+	margin: 0;
+	font-size: .75rem;
+	letter-spacing: .24em;
+	text-transform: uppercase;
+	color: #e8d6b4;
+}
+.cine-title {
+	margin: 0;
+	font-size: clamp(2.8rem, 8vw, 5.6rem);
+	font-weight: 500;
+	line-height: .95;
+	text-wrap: balance;
+	animation: cine-settle 2.2s cubic-bezier(.2, .7, .1, 1) both;
+}
+@keyframes cine-settle {
+	from { letter-spacing: .08em; opacity: .35; transform: translateY(14px); }
+	to { letter-spacing: 0; opacity: 1; transform: none; }
+}
+.cine-tag {
+	margin: 0;
+	font-family: var(--font-serif);
+	font-style: italic;
+	font-size: clamp(1.1rem, 2.2vw, 1.45rem);
+	opacity: .92;
+}
+.cine-copy .btn { justify-self: start; margin-top: 6px; }
+.cine-meta { display: grid; gap: 10px; justify-items: end; text-align: right; }
+.cine-place {
+	margin: 0;
+	font-size: .75rem;
+	letter-spacing: .16em;
+	text-transform: uppercase;
+	color: #e8d6b4;
+}
+.cine-progress { display: flex; gap: 6px; }
+.cine-progress span {
+	width: 34px;
+	height: 2px;
+	background: rgba(255, 255, 255, .25);
+	overflow: hidden;
+}
+.cine-progress span::after {
+	content: "";
+	display: block;
+	height: 100%;
+	width: 0;
+	background: var(--color-accent);
+}
+.cine-progress span.is-on::after { animation: cine-fill 7s linear forwards; }
+@keyframes cine-fill { to { width: 100%; } }
+
+.has-cine-hero .logement-card__image img { transition: transform 1.2s cubic-bezier(.2, .7, .1, 1); }
+.has-cine-hero .logement-card:hover .logement-card__image img { transform: scale(1.06); }
+@supports (animation-timeline: view()) {
+	.has-cine-hero .logement-card,
+	.has-cine-hero .testimonial-card,
+	.has-cine-hero .why-us-card {
+		animation: cine-rise linear both;
+		animation-timeline: view();
+		animation-range: entry 0% entry 60%;
+	}
+	@keyframes cine-rise {
+		from { transform: translateY(40px); }
+		to { transform: none; }
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.cine-slide,
+	.cine-slide img,
+	.cine-title,
+	.cine-progress span::after,
+	.has-cine-hero .logement-card,
+	.has-cine-hero .testimonial-card,
+	.has-cine-hero .why-us-card {
+		animation: none !important;
+		transition: none !important;
+	}
+	.cine-progress span.is-on::after { width: 100%; }
+}
+
+@media (max-width: 782px) {
+	.admin-bar.has-cine-hero .site-header { top: 46px; }
+}
+
 @media (max-width: 860px) {
+	.cine-meta { justify-items: start; text-align: left; }
 	.nav-toggle { display: flex; }
 	.site-nav { display: none; width: 100%; }
 	.site-nav.is-open { display: block; }

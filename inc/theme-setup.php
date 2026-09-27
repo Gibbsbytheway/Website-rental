@@ -46,6 +46,29 @@ function asteria_google_ads_tag() {
 }
 add_action( 'wp_head', 'asteria_google_ads_tag' );
 
+function asteria_is_cinematic_home() {
+	return is_front_page() && get_theme_mod( 'asteria_cinematic_home', false );
+}
+
+function asteria_cinematic_body_class( $classes ) {
+	if ( asteria_is_cinematic_home() ) {
+		$classes[] = 'has-cine-hero';
+	}
+	return $classes;
+}
+add_filter( 'body_class', 'asteria_cinematic_body_class' );
+
+function asteria_hero_slides() {
+	return array(
+		array( 'file' => 'villa-piscine.jpg', 'place' => 'Villa Asteria · Thouars', 'origin' => '78% 45%' ),
+		array( 'file' => 'quietstay-sejour.jpg', 'place' => 'QuietStay · Massy', 'origin' => '30% 60%' ),
+		array( 'file' => 'villa-suite.jpg', 'place' => 'Villa Asteria · Thouars', 'origin' => '55% 40%' ),
+		array( 'file' => 'quietstay-chambre-tropicale.jpg', 'place' => 'QuietStay · Massy', 'origin' => '70% 40%' ),
+		array( 'file' => 'villa-chambre-baroque.jpg', 'place' => 'Villa Asteria · Thouars', 'origin' => '55% 35%' ),
+		array( 'file' => 'quietstay-chambre-botanique.jpg', 'place' => 'QuietStay · Massy', 'origin' => '40% 40%' ),
+	);
+}
+
 function asteria_superhote_widget_url( $property_key ) {
 	if ( empty( $property_key ) ) {
 		return '';

@@ -97,6 +97,10 @@ function asteria_translations() {
 			'pt' => 'Você está a 2 cliques de uma experiência extraordinária',
 			'de' => 'Nur 2 Klicks von einem außergewöhnlichen Aufenthalt entfernt',
 		),
+		'hero.cta'            => array(
+			'fr' => 'Découvrir nos logements', 'en' => 'Discover our properties', 'it' => 'Scopri i nostri alloggi',
+			'es' => 'Descubre nuestros alojamientos', 'pt' => 'Descubra os nossos alojamentos', 'de' => 'Unsere Unterkünfte entdecken',
+		),
 		'logements.titre'     => array(
 			'fr' => 'Nos logements', 'en' => 'Our properties', 'it' => 'I nostri alloggi',
 			'es' => 'Nuestros alojamientos', 'pt' => 'Nossos alojamentos', 'de' => 'Unsere Unterkünfte',

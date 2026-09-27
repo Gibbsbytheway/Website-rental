@@ -28,5 +28,16 @@ function asteria_customize_register( $wp_customize ) {
 			'type'    => 'text',
 		) );
 	}
+
+	$wp_customize->add_setting( 'asteria_cinematic_home', array(
+		'default'           => false,
+		'sanitize_callback' => 'wp_validate_boolean',
+	) );
+	$wp_customize->add_control( 'asteria_cinematic_home', array(
+		'label'       => __( 'Accueil Cinématique (diaporama animé)', 'asteria-pulsar' ),
+		'description' => __( 'Cochez pour prévisualiser, puis Publier pour mettre en ligne.', 'asteria-pulsar' ),
+		'section'     => 'asteria_reglages',
+		'type'        => 'checkbox',
+	) );
 }
 add_action( 'customize_register', 'asteria_customize_register' );
