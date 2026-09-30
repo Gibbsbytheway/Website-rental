@@ -60,6 +60,29 @@
 		}
 	}
 
+	// Conversion Google Ads : le widget Superhôte est une iframe d'un autre domaine,
+	// on détecte donc le moment où elle prend le focus (clic ou tap dans le widget).
+	var bookingFrame = document.getElementById( 'booking-rental' );
+
+	if ( bookingFrame && window.asteriaAdsConversion && typeof window.gtag === 'function' ) {
+		var converted = false;
+		var poll;
+
+		var checkConversion = function() {
+			if ( converted || document.activeElement !== bookingFrame ) {
+				return;
+			}
+			converted = true;
+			clearInterval( poll );
+			window.gtag( 'event', 'conversion', { send_to: window.asteriaAdsConversion } );
+		};
+
+		window.addEventListener( 'blur', function() {
+			setTimeout( checkConversion, 0 );
+		} );
+		poll = setInterval( checkConversion, 1000 );
+	}
+
 	var langSwitcher = document.getElementById( 'lang-switcher' );
 	var langToggle = document.getElementById( 'lang-switcher-toggle' );
 

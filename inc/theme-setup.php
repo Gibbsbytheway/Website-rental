@@ -47,7 +47,7 @@ function asteria_google_ads_tag() {
 		gtag('js', new Date());
 		gtag('config', '<?php echo esc_js( $ads_id ); ?>');
 		<?php if ( $send_to ) : ?>
-		gtag('event', 'conversion', { 'send_to': '<?php echo esc_js( $send_to ); ?>' });
+		window.asteriaAdsConversion = '<?php echo esc_js( $send_to ); ?>';
 		<?php endif; ?>
 	</script>
 	<?php
