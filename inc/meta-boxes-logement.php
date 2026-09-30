@@ -16,6 +16,7 @@ function asteria_logement_meta_fields() {
 		'_logement_superhote_id' => __( 'ID logement Superhôte (rentalId)', 'asteria-pulsar' ),
 		'_logement_property_key' => __( 'Clé du widget Superhôte (property_key)', 'asteria-pulsar' ),
 		'_logement_google_ads_id' => __( 'ID balise Google Ads (AW-XXXXXXXXX), propre à ce logement', 'asteria-pulsar' ),
+		'_logement_google_ads_label' => __( 'Libellé de conversion Google Ads (déclenchée à chaque visite de cette page)', 'asteria-pulsar' ),
 	);
 }
 

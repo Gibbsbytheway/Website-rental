@@ -25,9 +25,14 @@ function asteria_enqueue_assets() {
 add_action( 'wp_enqueue_scripts', 'asteria_enqueue_assets' );
 
 function asteria_google_ads_tag() {
-	$ads_id = '';
+	$ads_id  = '';
+	$send_to = '';
 	if ( is_singular( 'logement' ) ) {
 		$ads_id = get_post_meta( get_the_ID(), '_logement_google_ads_id', true );
+		$label  = trim( (string) get_post_meta( get_the_ID(), '_logement_google_ads_label', true ) );
+		if ( $ads_id && $label ) {
+			$send_to = false !== strpos( $label, '/' ) ? $label : $ads_id . '/' . $label;
+		}
 	} else {
 		$ads_id = get_theme_mod( 'asteria_google_ads_id', '' );
 	}
@@ -41,6 +46,9 @@ function asteria_google_ads_tag() {
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
 		gtag('config', '<?php echo esc_js( $ads_id ); ?>');
+		<?php if ( $send_to ) : ?>
+		gtag('event', 'conversion', { 'send_to': '<?php echo esc_js( $send_to ); ?>' });
+		<?php endif; ?>
 	</script>
 	<?php
 }
