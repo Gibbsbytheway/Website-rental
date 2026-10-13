@@ -29,6 +29,7 @@ $horaires = get_theme_mod( 'asteria_horaires', 'Disponible 7j/7 de 9h00 à 22h00
 				<li><a href="<?php echo esc_url( home_url( '/logements/' ) ); ?>"><?php echo esc_html( asteria_t( 'nav.logements' ) ); ?></a></li>
 				<li><a href="<?php echo esc_url( home_url( '/a-propos/' ) ); ?>"><?php echo esc_html( asteria_t( 'nav.a_propos' ) ); ?></a></li>
 				<li><a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><?php echo esc_html( asteria_t( 'nav.contact' ) ); ?></a></li>
+				<li><a href="<?php echo esc_url( home_url( '/confidentialite/' ) ); ?>"><?php echo esc_html( asteria_t( 'footer.confidentialite' ) ); ?></a></li>
 			</ul>
 		</div>
 	</div>

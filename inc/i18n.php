@@ -205,6 +205,10 @@ function asteria_translations() {
 			'fr' => 'Contact', 'en' => 'Contact', 'it' => 'Contatto',
 			'es' => 'Contacto', 'pt' => 'Contato', 'de' => 'Kontakt',
 		),
+		'footer.confidentialite' => array(
+			'fr' => 'Politique de confidentialité', 'en' => 'Privacy policy', 'it' => 'Informativa sulla privacy',
+			'es' => 'Política de privacidad', 'pt' => 'Política de privacidade', 'de' => 'Datenschutzerklärung',
+		),
 		'footer.droits'       => array(
 			'fr' => 'Tous droits réservés.', 'en' => 'All rights reserved.', 'it' => 'Tutti i diritti riservati.',
 			'es' => 'Todos los derechos reservados.', 'pt' => 'Todos os direitos reservados.', 'de' => 'Alle Rechte vorbehalten.',

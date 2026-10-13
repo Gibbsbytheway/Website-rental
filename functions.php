@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 define( 'ASTERIA_SUPERHOTE_URL', 'https://connect.superhote.com/website/6a79eeb782528' );
 define( 'ASTERIA_SUPERHOTE_WIDGET_ID', '4463e247-f953-426b-a1e4-07dfb4a0204e' );
-define( 'ASTERIA_THEME_VERSION', '1.4.3' );
+define( 'ASTERIA_THEME_VERSION', '1.5.0' );
 
 require get_template_directory() . '/inc/i18n.php';
 require get_template_directory() . '/inc/marketing-content.php';
@@ -15,3 +15,4 @@ require get_template_directory() . '/inc/meta-boxes-logement.php';
 require get_template_directory() . '/inc/contact-form-handler.php';
 require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/theme-activation.php';
+require get_template_directory() . '/inc/privacy-page.php';

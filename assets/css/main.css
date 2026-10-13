@@ -273,6 +273,11 @@ h2 { font-size: 2rem; }
 
 /* Page content */
 .page-content { padding: 48px 0; max-width: 760px; }
+.page-content h2 { margin-top: 2em; }
+.page-content table { width: 100%; border-collapse: collapse; margin: 1em 0; }
+.page-content th,
+.page-content td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--color-border); }
+.page-content th { font-weight: 600; }
 
 /* Section headers (testimonials, why-us, faq) */
 .section-eyebrow {
