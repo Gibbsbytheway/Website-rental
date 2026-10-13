@@ -88,3 +88,49 @@ function asteria_sync_privacy_page() {
 	}
 }
 add_action( 'init', 'asteria_sync_privacy_page', 20 );
+
+/**
+ * Version traduite (titre + contenu) de la page pour la langue courante, ou null en français.
+ */
+function asteria_privacy_translation() {
+	$lang = asteria_current_lang();
+	if ( 'fr' === $lang ) {
+		return null;
+	}
+	$translations = asteria_privacy_translations();
+	return isset( $translations[ $lang ] ) ? $translations[ $lang ] : null;
+}
+
+function asteria_is_privacy_page_id( $post_id ) {
+	$post = get_post( $post_id );
+	return $post && 'page' === $post->post_type && 'confidentialite' === $post->post_name;
+}
+
+function asteria_privacy_translate_content( $content ) {
+	if ( ! is_page( 'confidentialite' ) || ! in_the_loop() || ! is_main_query() ) {
+		return $content;
+	}
+	$translation = asteria_privacy_translation();
+	return $translation ? $translation['content'] : $content;
+}
+add_filter( 'the_content', 'asteria_privacy_translate_content', 20 );
+
+function asteria_privacy_translate_title( $title, $post_id = 0 ) {
+	if ( is_admin() || ! $post_id || ! asteria_is_privacy_page_id( $post_id ) ) {
+		return $title;
+	}
+	$translation = asteria_privacy_translation();
+	return $translation ? $translation['title'] : $title;
+}
+add_filter( 'the_title', 'asteria_privacy_translate_title', 10, 2 );
+
+function asteria_privacy_translate_document_title( $parts ) {
+	if ( is_page( 'confidentialite' ) ) {
+		$translation = asteria_privacy_translation();
+		if ( $translation ) {
+			$parts['title'] = $translation['title'];
+		}
+	}
+	return $parts;
+}
+add_filter( 'document_title_parts', 'asteria_privacy_translate_document_title' );
