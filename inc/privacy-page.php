@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Incrémenter pour réécrire le contenu de la page lors du prochain déploiement.
-define( 'ASTERIA_PRIVACY_PAGE_VERSION', '2026-10-13' );
+define( 'ASTERIA_PRIVACY_PAGE_VERSION', '2026-10-13b' );
 
 function asteria_privacy_page_content() {
 	return <<<'HTML'
@@ -17,7 +17,7 @@ function asteria_privacy_page_content() {
 <li><strong>Villa Asteria – Thouars</strong> : SCI KGBY-IMMO, société civile immobilière – SIREN 918 206 772</li>
 </ul>
 <p>Le site asteria-pulsar.fr, le formulaire de contact et les comptes Pulsar Rentals sur les réseaux sociaux sont gérés par Guillaume Boissard.</p>
-<p>Contact unique pour toute question ou demande : gboissard@free.fr – +33 6 60 58 56 66</p>
+<p>Contact unique pour toute question ou demande : gboissardent@free.fr – +33 7 59 95 90 77</p>
 <h2>Données collectées</h2>
 <ul>
 <li><strong>Réservation</strong> : nom, prénom, e-mail, téléphone, dates de séjour, nombre de voyageurs, messages échangés, informations de paiement (traitées par le prestataire de paiement, jamais conservées par nous).</li>
@@ -43,7 +43,7 @@ function asteria_privacy_page_content() {
 <li>Demandes de contact : 3 ans à compter du dernier échange.</li>
 </ul>
 <h2>Vos droits</h2>
-<p>Vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation, d'opposition et de portabilité de vos données. Pour les exercer, écrivez à gboissard@free.fr.</p>
+<p>Vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation, d'opposition et de portabilité de vos données. Pour les exercer, écrivez à gboissardent@free.fr.</p>
 <p>Si vous estimez que vos droits ne sont pas respectés, vous pouvez adresser une réclamation à la CNIL (www.cnil.fr).</p>
 <h2>Cookies</h2>
 <p>Le site utilise des cookies strictement nécessaires à son fonctionnement, notamment pour mémoriser la langue choisie.</p>

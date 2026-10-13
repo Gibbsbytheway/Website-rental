@@ -18,7 +18,7 @@ function asteria_privacy_translations() {
 <li><strong>Villa Asteria – Thouars</strong>: SCI KGBY-IMMO, French property holding company (société civile immobilière) – SIREN 918 206 772</li>
 </ul>
 <p>The asteria-pulsar.fr website, the contact form and the Pulsar Rentals social media accounts are managed by Guillaume Boissard.</p>
-<p>Single point of contact for any question or request: gboissard@free.fr – +33 6 60 58 56 66</p>
+<p>Single point of contact for any question or request: gboissardent@free.fr – +33 7 59 95 90 77</p>
 <h2>Data collected</h2>
 <ul>
 <li><strong>Booking</strong>: last name, first name, email, phone number, dates of stay, number of guests, messages exchanged, payment information (processed by the payment provider, never stored by us).</li>
@@ -44,7 +44,7 @@ function asteria_privacy_translations() {
 <li>Contact requests: 3 years from the last exchange.</li>
 </ul>
 <h2>Your rights</h2>
-<p>You have the right to access, rectify, erase, restrict, object to and port your data. To exercise these rights, write to gboissard@free.fr.</p>
+<p>You have the right to access, rectify, erase, restrict, object to and port your data. To exercise these rights, write to gboissardent@free.fr.</p>
 <p>If you believe your rights are not being respected, you may lodge a complaint with the CNIL, the French data protection authority (www.cnil.fr).</p>
 <h2>Cookies</h2>
 <p>The website uses cookies that are strictly necessary for it to function, in particular to remember the language you have chosen.</p>
@@ -61,7 +61,7 @@ HTML;
 <li><strong>Villa Asteria – Thouars</strong>: SCI KGBY-IMMO, società civile immobiliare di diritto francese – SIREN 918 206 772</li>
 </ul>
 <p>Il sito asteria-pulsar.fr, il modulo di contatto e gli account Pulsar Rentals sui social network sono gestiti da Guillaume Boissard.</p>
-<p>Contatto unico per qualsiasi domanda o richiesta: gboissard@free.fr – +33 6 60 58 56 66</p>
+<p>Contatto unico per qualsiasi domanda o richiesta: gboissardent@free.fr – +33 7 59 95 90 77</p>
 <h2>Dati raccolti</h2>
 <ul>
 <li><strong>Prenotazione</strong>: cognome, nome, e-mail, telefono, date del soggiorno, numero di ospiti, messaggi scambiati, dati di pagamento (trattati dal fornitore del servizio di pagamento, mai conservati da noi).</li>
@@ -87,7 +87,7 @@ HTML;
 <li>Richieste di contatto: 3 anni dall'ultimo scambio.</li>
 </ul>
 <h2>I tuoi diritti</h2>
-<p>Hai il diritto di accesso, rettifica, cancellazione, limitazione, opposizione e portabilità dei tuoi dati. Per esercitarli, scrivi a gboissard@free.fr.</p>
+<p>Hai il diritto di accesso, rettifica, cancellazione, limitazione, opposizione e portabilità dei tuoi dati. Per esercitarli, scrivi a gboissardent@free.fr.</p>
 <p>Se ritieni che i tuoi diritti non siano rispettati, puoi presentare un reclamo alla CNIL, l'autorità francese per la protezione dei dati (www.cnil.fr).</p>
 <h2>Cookie</h2>
 <p>Il sito utilizza solo i cookie strettamente necessari al suo funzionamento, in particolare per memorizzare la lingua scelta.</p>
@@ -104,7 +104,7 @@ HTML;
 <li><strong>Villa Asteria – Thouars</strong>: SCI KGBY-IMMO, sociedad civil inmobiliaria de derecho francés – SIREN 918 206 772</li>
 </ul>
 <p>El sitio web asteria-pulsar.fr, el formulario de contacto y las cuentas de Pulsar Rentals en las redes sociales están gestionados por Guillaume Boissard.</p>
-<p>Contacto único para cualquier pregunta o solicitud: gboissard@free.fr – +33 6 60 58 56 66</p>
+<p>Contacto único para cualquier pregunta o solicitud: gboissardent@free.fr – +33 7 59 95 90 77</p>
 <h2>Datos recopilados</h2>
 <ul>
 <li><strong>Reserva</strong>: apellidos, nombre, correo electrónico, teléfono, fechas de estancia, número de viajeros, mensajes intercambiados, datos de pago (tratados por el proveedor de pagos, nunca conservados por nosotros).</li>
@@ -130,7 +130,7 @@ HTML;
 <li>Solicitudes de contacto: 3 años a partir del último intercambio.</li>
 </ul>
 <h2>Sus derechos</h2>
-<p>Usted tiene derecho de acceso, rectificación, supresión, limitación, oposición y portabilidad de sus datos. Para ejercerlos, escriba a gboissard@free.fr.</p>
+<p>Usted tiene derecho de acceso, rectificación, supresión, limitación, oposición y portabilidad de sus datos. Para ejercerlos, escriba a gboissardent@free.fr.</p>
 <p>Si considera que no se respetan sus derechos, puede presentar una reclamación ante la CNIL, la autoridad francesa de protección de datos (www.cnil.fr).</p>
 <h2>Cookies</h2>
 <p>El sitio utiliza cookies estrictamente necesarias para su funcionamiento, en particular para recordar el idioma elegido.</p>
@@ -147,7 +147,7 @@ HTML;
 <li><strong>Villa Asteria – Thouars</strong>: SCI KGBY-IMMO, sociedade civil imobiliária de direito francês – SIREN 918 206 772</li>
 </ul>
 <p>O site asteria-pulsar.fr, o formulário de contacto e as contas da Pulsar Rentals nas redes sociais são geridos por Guillaume Boissard.</p>
-<p>Contacto único para qualquer questão ou pedido: gboissard@free.fr – +33 6 60 58 56 66</p>
+<p>Contacto único para qualquer questão ou pedido: gboissardent@free.fr – +33 7 59 95 90 77</p>
 <h2>Dados recolhidos</h2>
 <ul>
 <li><strong>Reserva</strong>: apelido, nome, e-mail, telefone, datas da estadia, número de hóspedes, mensagens trocadas, informações de pagamento (tratadas pelo prestador de serviços de pagamento, nunca conservadas por nós).</li>
@@ -173,7 +173,7 @@ HTML;
 <li>Pedidos de contacto: 3 anos a contar da última troca.</li>
 </ul>
 <h2>Os seus direitos</h2>
-<p>Dispõe do direito de acesso, retificação, apagamento, limitação, oposição e portabilidade dos seus dados. Para os exercer, escreva para gboissard@free.fr.</p>
+<p>Dispõe do direito de acesso, retificação, apagamento, limitação, oposição e portabilidade dos seus dados. Para os exercer, escreva para gboissardent@free.fr.</p>
 <p>Se considerar que os seus direitos não estão a ser respeitados, pode apresentar uma reclamação à CNIL, a autoridade francesa de proteção de dados (www.cnil.fr).</p>
 <h2>Cookies</h2>
 <p>O site utiliza cookies estritamente necessários ao seu funcionamento, nomeadamente para memorizar o idioma escolhido.</p>
@@ -190,7 +190,7 @@ HTML;
 <li><strong>Villa Asteria – Thouars</strong>: SCI KGBY-IMMO, Immobiliengesellschaft bürgerlichen Rechts nach französischem Recht – SIREN 918 206 772</li>
 </ul>
 <p>Die Website asteria-pulsar.fr, das Kontaktformular und die Social-Media-Konten von Pulsar Rentals werden von Guillaume Boissard verwaltet.</p>
-<p>Zentraler Kontakt für alle Fragen und Anliegen: gboissard@free.fr – +33 6 60 58 56 66</p>
+<p>Zentraler Kontakt für alle Fragen und Anliegen: gboissardent@free.fr – +33 7 59 95 90 77</p>
 <h2>Erhobene Daten</h2>
 <ul>
 <li><strong>Buchung</strong>: Nachname, Vorname, E-Mail, Telefonnummer, Aufenthaltsdaten, Anzahl der Gäste, ausgetauschte Nachrichten, Zahlungsinformationen (vom Zahlungsdienstleister verarbeitet, niemals von uns gespeichert).</li>
@@ -216,7 +216,7 @@ HTML;
 <li>Kontaktanfragen: 3 Jahre ab dem letzten Austausch.</li>
 </ul>
 <h2>Ihre Rechte</h2>
-<p>Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Widerspruch und Datenübertragbarkeit. Um diese Rechte auszuüben, schreiben Sie an gboissard@free.fr.</p>
+<p>Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Widerspruch und Datenübertragbarkeit. Um diese Rechte auszuüben, schreiben Sie an gboissardent@free.fr.</p>
 <p>Wenn Sie der Ansicht sind, dass Ihre Rechte nicht gewahrt werden, können Sie eine Beschwerde bei der CNIL, der französischen Datenschutzbehörde, einreichen (www.cnil.fr).</p>
 <h2>Cookies</h2>
 <p>Die Website verwendet Cookies, die für ihren Betrieb unbedingt erforderlich sind, insbesondere um die gewählte Sprache zu speichern.</p>

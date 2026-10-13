@@ -10,8 +10,8 @@ function asteria_customize_register( $wp_customize ) {
 	) );
 
 	$fields = array(
-		'asteria_telephone'          => array( 'label' => __( 'Téléphone de contact', 'asteria-pulsar' ), 'default' => '+33660585666' ),
-		'asteria_contact_email'      => array( 'label' => __( 'Email de contact', 'asteria-pulsar' ), 'default' => 'gboissard@free.fr' ),
+		'asteria_telephone'          => array( 'label' => __( 'Téléphone de contact', 'asteria-pulsar' ), 'default' => '+33759959077' ),
+		'asteria_contact_email'      => array( 'label' => __( 'Email de contact', 'asteria-pulsar' ), 'default' => 'gboissardent@free.fr' ),
 		'asteria_horaires'           => array( 'label' => __( 'Disponibilité', 'asteria-pulsar' ), 'default' => 'Disponible 7j/7 de 9h00 à 22h00' ),
 		'asteria_google_ads_id'      => array( 'label' => __( 'ID balise Google Ads (AW-XXXXXXXXX)', 'asteria-pulsar' ), 'default' => '' ),
 		'asteria_google_ads_label'   => array( 'label' => __( 'Label de conversion Google Ads', 'asteria-pulsar' ), 'default' => '' ),

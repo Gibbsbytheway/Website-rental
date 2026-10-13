@@ -8,8 +8,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header();
 
-$phone    = get_theme_mod( 'asteria_telephone', '+33660585666' );
-$email    = get_theme_mod( 'asteria_contact_email', 'gboissard@free.fr' );
+$phone    = get_theme_mod( 'asteria_telephone', '+33759959077' );
+$email    = get_theme_mod( 'asteria_contact_email', 'gboissardent@free.fr' );
 $horaires = get_theme_mod( 'asteria_horaires', 'Disponible 7j/7 de 9h00 à 22h00' );
 $status   = isset( $_GET['contact'] ) ? sanitize_key( $_GET['contact'] ) : '';
 ?>
