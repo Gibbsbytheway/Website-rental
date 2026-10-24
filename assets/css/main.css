@@ -538,3 +538,9 @@ h2 { font-size: 2rem; }
 	.site-nav ul { flex-direction: column; gap: 12px; padding: 16px 0; }
 	.contact, .site-footer__inner, .logement-detail { grid-template-columns: 1fr; }
 }
+
+/* Annonces sur les plateformes, sous la réservation directe */
+.logement-platforms { margin-top: -32px; padding: 0 0 64px; text-align: center; }
+.logement-platforms__note { font-family: var(--font-serif); font-style: italic; font-size: 1.1rem; margin-bottom: 12px; }
+.logement-platforms__title { color: var(--color-muted); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px; }
+.logement-platforms__list { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }

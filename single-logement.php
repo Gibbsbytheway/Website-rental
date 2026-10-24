@@ -107,6 +107,19 @@ while ( have_posts() ) :
 		</section>
 	<?php endif; ?>
 
+	<?php $platforms = asteria_logement_platform_urls( get_the_ID() ); ?>
+	<?php if ( $platforms ) : ?>
+		<section class="logement-platforms container">
+			<p class="logement-platforms__note"><?php echo esc_html( asteria_t( 'platforms.note' ) ); ?></p>
+			<p class="logement-platforms__title"><?php echo esc_html( asteria_t( 'platforms.titre' ) ); ?></p>
+			<ul class="logement-platforms__list">
+				<?php foreach ( $platforms as $name => $url ) : ?>
+					<li><a class="btn btn--outline" href="<?php echo esc_url( $url ); ?>" target="_blank" rel="noopener"><?php echo esc_html( $name ); ?></a></li>
+				<?php endforeach; ?>
+			</ul>
+		</section>
+	<?php endif; ?>
+
 <?php endwhile; ?>
 
 <?php get_footer(); ?>

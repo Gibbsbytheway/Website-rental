@@ -113,6 +113,18 @@ function asteria_translations() {
 			'pt' => '%1$s quartos · %2$s camas · %3$s hóspedes',
 			'de' => '%1$s Schlafzimmer · %2$s Betten · %3$s Gäste',
 		),
+		'platforms.titre'     => array(
+			'fr' => 'Aussi disponible sur', 'en' => 'Also available on', 'it' => 'Disponibile anche su',
+			'es' => 'También disponible en', 'pt' => 'Também disponível em', 'de' => 'Auch verfügbar auf',
+		),
+		'platforms.note'      => array(
+			'fr' => 'Le meilleur tarif reste ici, en réservation directe : sans frais de service de plateforme.',
+			'en' => 'The best rate is right here when you book direct: no platform service fees.',
+			'it' => 'La tariffa migliore è qui, prenotando direttamente: nessuna commissione di piattaforma.',
+			'es' => 'La mejor tarifa está aquí, reservando directamente: sin gastos de servicio de plataforma.',
+			'pt' => 'A melhor tarifa está aqui, reservando diretamente: sem taxas de serviço de plataforma.',
+			'de' => 'Den besten Preis gibt es hier bei Direktbuchung: ohne Servicegebühren einer Plattform.',
+		),
 		'card.a_partir_de'    => array(
 			'fr' => 'À partir de', 'en' => 'From', 'it' => 'A partire da',
 			'es' => 'Desde', 'pt' => 'A partir de', 'de' => 'Ab',

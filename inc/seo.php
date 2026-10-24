@@ -28,6 +28,21 @@ function asteria_seo_logement_image( $post_id ) {
 	return get_template_directory_uri() . '/assets/img/hero/' . $file;
 }
 
+/**
+ * Annonces du logement sur les plateformes (Airbnb, Booking.com).
+ * Saisies dans l'admin ; valeur par défaut pour la Villa Asteria tant que le champ est vide.
+ */
+function asteria_logement_platform_urls( $post_id ) {
+	$urls = array(
+		'Airbnb'      => trim( (string) get_post_meta( $post_id, '_logement_airbnb_url', true ) ),
+		'Booking.com' => trim( (string) get_post_meta( $post_id, '_logement_booking_url', true ) ),
+	);
+	if ( ! $urls['Airbnb'] && false !== strpos( get_post_field( 'post_name', $post_id ), 'villa' ) ) {
+		$urls['Airbnb'] = 'https://www.airbnb.fr/rooms/1754681298830730740';
+	}
+	return array_filter( $urls );
+}
+
 function asteria_seo_logement_description( $post_id ) {
 	$text = has_excerpt( $post_id ) ? get_the_excerpt( $post_id ) : get_post_field( 'post_content', $post_id );
 	$text = wp_strip_all_tags( strip_shortcodes( $text ) );
@@ -131,6 +146,10 @@ function asteria_seo_head() {
 			) ),
 			'checkinTime'  => '16:00',
 		);
+		$platforms = array_values( asteria_logement_platform_urls( $post_id ) );
+		if ( $platforms ) {
+			$lodging['sameAs'] = $platforms;
+		}
 		if ( $prix ) {
 			$lodging['priceRange'] = 'À partir de ' . $prix . ' € / nuit';
 		}
