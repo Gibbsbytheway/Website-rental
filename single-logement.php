@@ -31,6 +31,25 @@ while ( have_posts() ) :
 	</section>
 
 	<?php if ( $widget_url ) : ?>
+		<?php // Texte lisible par Google (le contenu de l'iframe Superhôte ne compte pas pour le référencement de ce site). ?>
+		<section class="logement-intro container">
+			<?php if ( $voyageurs || $chambres || $lits ) : ?>
+				<p class="logement-detail__specs">
+					<?php echo esc_html( sprintf( asteria_t( 'card.specs' ), $chambres, $lits, $voyageurs ) ); ?>
+				</p>
+			<?php endif; ?>
+			<div class="logement-detail__description"><?php the_content(); ?></div>
+			<?php if ( $equipements ) : ?>
+				<div class="logement-detail__amenities">
+					<ul>
+						<?php foreach ( array_filter( array_map( 'trim', explode( "\n", $equipements ) ) ) as $item ) : ?>
+							<li><?php echo esc_html( $item ); ?></li>
+						<?php endforeach; ?>
+					</ul>
+				</div>
+			<?php endif; ?>
+		</section>
+
 		<section class="booking-widget container">
 			<iframe
 				src="<?php echo esc_url( $widget_url ); ?>"

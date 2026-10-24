@@ -228,6 +228,8 @@ h2 { font-size: 2rem; }
 }
 .booking-card__price { font-size: 1.1rem; margin-bottom: 16px; }
 
+.logement-intro { max-width: 820px; padding: 40px 0 8px; }
+.logement-intro .logement-detail__amenities ul { margin-top: 16px; }
 .booking-widget { padding: 0 0 64px; scroll-margin-top: 90px; }
 .booking-widget iframe { width: 100%; border: 1px solid var(--color-border); border-radius: var(--radius); }
 
