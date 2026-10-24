@@ -114,7 +114,19 @@ while ( have_posts() ) :
 			<p class="logement-platforms__title"><?php echo esc_html( asteria_t( 'platforms.titre' ) ); ?></p>
 			<ul class="logement-platforms__list">
 				<?php foreach ( $platforms as $name => $url ) : ?>
-					<li><a class="btn btn--outline" href="<?php echo esc_url( $url ); ?>" target="_blank" rel="noopener"><?php echo esc_html( $name ); ?></a></li>
+					<?php
+					$logo_file = 'assets/img/platforms/' . sanitize_title( strtok( $name, '.' ) ) . '.png';
+					$has_logo  = file_exists( get_template_directory() . '/' . $logo_file );
+					?>
+					<li>
+						<a class="<?php echo $has_logo ? 'platform-logo' : 'btn btn--outline'; ?>" href="<?php echo esc_url( $url ); ?>" target="_blank" rel="noopener">
+							<?php if ( $has_logo ) : ?>
+								<img src="<?php echo esc_url( get_template_directory_uri() . '/' . $logo_file ); ?>" alt="<?php echo esc_attr( $name ); ?>" height="32" loading="lazy" />
+							<?php else : ?>
+								<?php echo esc_html( $name ); ?>
+							<?php endif; ?>
+						</a>
+					</li>
 				<?php endforeach; ?>
 			</ul>
 		</section>
