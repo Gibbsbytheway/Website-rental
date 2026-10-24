@@ -8,7 +8,6 @@ get_header();
 while ( have_posts() ) :
 	the_post();
 
-	$adresse      = get_post_meta( get_the_ID(), '_logement_adresse', true );
 	$ville        = get_post_meta( get_the_ID(), '_logement_ville', true );
 	$prix         = get_post_meta( get_the_ID(), '_logement_prix_nuit', true );
 	$voyageurs    = get_post_meta( get_the_ID(), '_logement_voyageurs', true );
@@ -24,7 +23,10 @@ while ( have_posts() ) :
 	<section class="page-hero">
 		<div class="container">
 			<h1><?php the_title(); ?></h1>
-			<p><?php echo esc_html( trim( $adresse . ( $ville ? ', ' . $ville : '' ) ) ); ?></p>
+			<?php // L'adresse précise reste privée (communiquée aux voyageurs après réservation) : seule la ville est affichée. ?>
+			<?php if ( $ville ) : ?>
+				<p><?php echo esc_html( $ville ); ?></p>
+			<?php endif; ?>
 		</div>
 	</section>
 

@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 function asteria_logement_meta_fields() {
 	return array(
-		'_logement_adresse'      => __( 'Adresse', 'asteria-pulsar' ),
+		'_logement_adresse'      => __( 'Adresse (privée, jamais affichée sur le site)', 'asteria-pulsar' ),
 		'_logement_ville'        => __( 'Ville', 'asteria-pulsar' ),
 		'_logement_prix_nuit'    => __( 'Prix à partir de (€/nuit)', 'asteria-pulsar' ),
 		'_logement_voyageurs'    => __( 'Nombre de voyageurs', 'asteria-pulsar' ),

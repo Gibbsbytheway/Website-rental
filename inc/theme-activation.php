@@ -49,7 +49,7 @@ function asteria_theme_activation() {
 		'title'   => "QuietStay 20' PARIS, Connected HOME avec Terrasse",
 		'content' => "BIENVENUE DANS NOTRE BEL APPARTEMENT ⭐QuietStay⭐\n\n🔑 ENTRÉE AUTONOME / AUTOMATISÉE 🔑\n\nPoint de chute idéal dans un logement paisible et convivial, à 2 minutes à pieds de la Gare de Massy Palaiseau. Nous n'avons volontairement aucun balcon, terrasse, jacuzzi dans le souci du confort et du bien être. À 15 min de Paris. Détendez-vous en terrasse, à l'abri des regards.",
 		'meta'    => array(
-			'_logement_adresse'      => '10 rue Jean-Baptiste Charcot',
+			'_logement_adresse'      => '',
 			'_logement_ville'        => '91300 Massy',
 			'_logement_prix_nuit'    => '137',
 			'_logement_voyageurs'    => '6',
@@ -68,7 +68,7 @@ function asteria_theme_activation() {
 		'title'   => 'Villa Asteria — Thouars',
 		'content' => "Bienvenue à la Villa Asteria, une demeure d'exception de grand standing située à Thouars. Établissement pensé pour les séjours haut de gamme en famille, entre amis ou pour des événements professionnels, cette propriété unique allie espaces intimistes, une décoration soignée et un aménagement idéal d'accueil.",
 		'meta'    => array(
-			'_logement_adresse'      => '5 Rue des Fleury',
+			'_logement_adresse'      => '',
 			'_logement_ville'        => '79100 Thouars',
 			'_logement_prix_nuit'    => '380',
 			'_logement_voyageurs'    => '16',
