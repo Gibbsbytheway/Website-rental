@@ -18,7 +18,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 function asteria_seo_logement_image( $post_id ) {
 	if ( has_post_thumbnail( $post_id ) ) {
 		$src = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'large' );
-		if ( $src ) {
+		// Les aperçus Facebook / WhatsApp / Instagram ne lisent pas toujours l'AVIF : on garde alors la photo JPEG du thème.
+		if ( $src && ! preg_match( '/\.avif$/i', $src[0] ) ) {
 			return $src[0];
 		}
 	}
