@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 $phone    = get_theme_mod( 'asteria_telephone', '+33759959077' );
-$email    = get_theme_mod( 'asteria_contact_email', 'gboissardent@free.fr' );
+$email    = get_theme_mod( 'asteria_contact_email', 'contact@asteria-pulsar.fr' );
 $horaires = get_theme_mod( 'asteria_horaires', 'Disponible 7j/7 de 9h00 à 22h00' );
 ?>
 

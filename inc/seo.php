@@ -38,7 +38,7 @@ function asteria_logement_platform_urls( $post_id ) {
 		'Booking.com' => trim( (string) get_post_meta( $post_id, '_logement_booking_url', true ) ),
 	);
 	if ( ! $urls['Airbnb'] && false !== strpos( get_post_field( 'post_name', $post_id ), 'villa' ) ) {
-		$urls['Airbnb'] = 'https://www.airbnb.fr/rooms/1754681298830730740';
+		$urls['Airbnb'] = 'https://www.airbnb.fr/h/villa-asteria-thouars';
 	}
 	return array_filter( $urls );
 }

@@ -20,7 +20,7 @@ function asteria_handle_contact_submission() {
 		exit;
 	}
 
-	$to      = get_theme_mod( 'asteria_contact_email', 'gboissardent@free.fr' );
+	$to      = get_theme_mod( 'asteria_contact_email', 'contact@asteria-pulsar.fr' );
 	$subject = sprintf( '[Contact site] %s', $sujet ? $sujet : 'Nouvelle demande' );
 	$body    = sprintf(
 		"Nouveau message depuis le site :\n\nNom : %s %s\nEmail : %s\nSujet : %s\n\nMessage :\n%s",
