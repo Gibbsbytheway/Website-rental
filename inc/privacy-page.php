@@ -4,11 +4,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Incrémenter pour réécrire le contenu de la page lors du prochain déploiement.
-define( 'ASTERIA_PRIVACY_PAGE_VERSION', '2026-10-13b' );
+define( 'ASTERIA_PRIVACY_PAGE_VERSION', '2026-11-01' );
 
 function asteria_privacy_page_content() {
 	return <<<'HTML'
-<p><em>Dernière mise à jour : 13 octobre 2026</em></p>
+<p><em>Dernière mise à jour : 1er novembre 2026</em></p>
 <p>Pulsar Rentals est le nom commercial sous lequel sont proposés à la location les logements présentés sur asteria-pulsar.fr. Cette politique explique comment les données personnelles sont traitées sur ce site, lors des réservations et via les comptes Pulsar Rentals sur les réseaux sociaux.</p>
 <h2>Responsables du traitement</h2>
 <p>Chaque logement est exploité par une entité distincte, responsable des données liées à ses réservations :</p>
@@ -28,7 +28,12 @@ function asteria_privacy_page_content() {
 <table><thead><tr><th>Finalité</th><th>Base légale</th></tr></thead><tbody><tr><td>Gérer les réservations, l'accueil et le séjour</td><td>Exécution du contrat</td></tr><tr><td>Répondre aux demandes de contact</td><td>Intérêt légitime</td></tr><tr><td>Respecter nos obligations comptables, fiscales et de déclaration des voyageurs</td><td>Obligation légale</td></tr><tr><td>Publier des contenus sur nos pages Facebook, Instagram, Threads, YouTube et TikTok</td><td>Intérêt légitime</td></tr></tbody></table>
 <p>Les contenus publiés sur les réseaux sociaux présentent uniquement nos logements : ils ne contiennent aucune donnée personnelle de nos voyageurs.</p>
 <h2>Destinataires</h2>
-<p>Les données sont accessibles uniquement à l'exploitant du logement concerné et à ses prestataires techniques, dans la limite de leurs missions : outil de gestion des réservations (SuperHote), plateformes de réservation, prestataire de paiement, hébergeur du site et messagerie. Elles ne sont jamais vendues.</p>
+<p>Les données sont accessibles uniquement à l'exploitant du logement concerné et à ses prestataires techniques, dans la limite de leurs missions : outil de gestion des réservations (SuperHote), plateformes de réservation, prestataire de paiement, hébergeur du site, messagerie (dont WhatsApp, fourni par Meta) et fournisseur de l'agent d'intelligence artificielle. Elles ne sont jamais vendues.</p>
+<h2>Messagerie WhatsApp et agent IA</h2>
+<p>Lorsque vous nous écrivez sur WhatsApp au +33 7 59 95 90 77, vos messages (numéro de téléphone, nom de profil, contenu) sont reçus via l'API WhatsApp Business de Meta et conservés dans notre historique des échanges, rattaché à votre réservation.</p>
+<p>Pour vous répondre plus rapidement, un agent d'intelligence artificielle analyse votre message et prépare une proposition de réponse. Aucune réponse ne vous est envoyée sans avoir été relue et validée par votre hôte. Le fournisseur de cet agent traite ces données uniquement pour fournir le service et ne les utilise pas pour entraîner ses modèles.</p>
+<p>Lorsqu'un échange concerne un incident ou un litige, une copie peut être ajoutée à la messagerie de la plateforme de réservation concernée (Airbnb, Booking.com), via notre outil de gestion SuperHote, afin d'en garder la trace.</p>
+<p>Base légale : exécution du contrat (gestion de votre séjour) et intérêt légitime (traçabilité des échanges).</p>
 <h2>Applications connectées (Google / YouTube, Meta, TikTok)</h2>
 <p>Pour publier ses propres vidéos et photos, Pulsar Rentals utilise une application interne, gérée par Guillaume Boissard, connectée à ses comptes YouTube, Facebook, Instagram, Threads et TikTok. Cette application :</p>
 <ul>
@@ -41,6 +46,7 @@ function asteria_privacy_page_content() {
 <ul>
 <li>Données de réservation : durée du séjour, puis 10 ans pour les pièces comptables.</li>
 <li>Demandes de contact : 3 ans à compter du dernier échange.</li>
+<li>Échanges WhatsApp : 3 ans après votre dernier séjour ou votre dernier échange.</li>
 </ul>
 <h2>Vos droits</h2>
 <p>Vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation, d'opposition et de portabilité de vos données. Pour les exercer, écrivez à contact@asteria-pulsar.fr.</p>
