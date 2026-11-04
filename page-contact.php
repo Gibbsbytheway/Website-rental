@@ -12,6 +12,9 @@ $phone    = get_theme_mod( 'asteria_telephone', '+33759959077' );
 $email    = get_theme_mod( 'asteria_contact_email', 'contact@asteria-pulsar.fr' );
 $horaires = get_theme_mod( 'asteria_horaires', 'Disponible 7j/7 de 9h00 à 22h00' );
 $status   = isset( $_GET['contact'] ) ? sanitize_key( $_GET['contact'] ) : '';
+if ( isset( $_GET['envoye'] ) && '1' === $_GET['envoye'] ) {
+	$status = 'success';
+}
 ?>
 
 <section class="page-hero">
@@ -26,7 +29,7 @@ $status   = isset( $_GET['contact'] ) ? sanitize_key( $_GET['contact'] ) : '';
 		<h2><?php echo esc_html( asteria_t( 'contact.formulaire' ) ); ?></h2>
 
 		<?php if ( 'success' === $status ) : ?>
-			<p class="notice notice--success"><?php echo esc_html( asteria_t( 'contact.succes' ) ); ?></p>
+			<p class="notice notice--success" data-ads-conversion="contact"><?php echo esc_html( asteria_t( 'contact.succes' ) ); ?></p>
 		<?php elseif ( 'error' === $status ) : ?>
 			<p class="notice notice--error"><?php echo esc_html( asteria_t( 'contact.erreur' ) ); ?></p>
 		<?php endif; ?>

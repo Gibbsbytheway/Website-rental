@@ -83,6 +83,49 @@
 		poll = setInterval( checkConversion, 1000 );
 	}
 
+	// Conversions Google Ads (la balise AW-18078484952 est chargée dans le <head>).
+	var ADS_CONVERSIONS = {
+		phone: 'AW-18078484952/-S6JCL3gjbIdENiTv6xD',
+		email: 'AW-18078484952/eOoeCMDgjbIdENiTv6xD',
+		contact: 'AW-18078484952/PiwmCLrgjbIdENiTv6xD'
+	};
+
+	var sendAdsConversion = function( sendTo ) {
+		if ( typeof window.gtag !== 'function' ) {
+			return;
+		}
+		window.gtag( 'event', 'conversion', { send_to: sendTo, value: 1.0, currency: 'EUR' } );
+	};
+
+	// Écouteur délégué : couvre tous les liens tel:/mailto: (en-tête, pied de page,
+	// fiches logements, page contact…), y compris ceux ajoutés après le chargement.
+	document.addEventListener( 'click', function( e ) {
+		var link = e.target && e.target.closest ? e.target.closest( 'a[href]' ) : null;
+		if ( ! link ) {
+			return;
+		}
+		var href = ( link.getAttribute( 'href' ) || '' ).trim().toLowerCase();
+		if ( href.indexOf( 'tel:' ) === 0 ) {
+			sendAdsConversion( ADS_CONVERSIONS.phone );
+		} else if ( href.indexOf( 'mailto:' ) === 0 ) {
+			sendAdsConversion( ADS_CONVERSIONS.email );
+		}
+	} );
+
+	// Formulaire de contact : après un envoi réussi, le serveur redirige vers
+	// /contact/?envoye=1 et affiche le message de succès marqué data-ads-conversion.
+	// On déclenche la conversion puis on retire le paramètre de l'URL pour qu'un
+	// rechargement ou un retour arrière ne la redéclenche pas.
+	if ( document.querySelector( '[data-ads-conversion="contact"]' ) && /[?&]envoye=1(&|$)/.test( window.location.search ) ) {
+		sendAdsConversion( ADS_CONVERSIONS.contact );
+		if ( window.history && window.history.replaceState ) {
+			var cleanSearch = window.location.search
+				.replace( /([?&])envoye=1(&|$)/, function( m, before, after ) { return after ? before : ''; } )
+				.replace( /^&/, '?' );
+			window.history.replaceState( null, '', window.location.pathname + cleanSearch + window.location.hash );
+		}
+	}
+
 	var langSwitcher = document.getElementById( 'lang-switcher' );
 	var langToggle = document.getElementById( 'lang-switcher-toggle' );
 
