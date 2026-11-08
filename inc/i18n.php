@@ -221,6 +221,10 @@ function asteria_translations() {
 			'fr' => 'Politique de confidentialité', 'en' => 'Privacy policy', 'it' => 'Informativa sulla privacy',
 			'es' => 'Política de privacidad', 'pt' => 'Política de privacidade', 'de' => 'Datenschutzerklärung',
 		),
+		'footer.conditions'   => array(
+			'fr' => "Conditions d'utilisation", 'en' => 'Terms of use', 'it' => "Condizioni d'uso",
+			'es' => 'Condiciones de uso', 'pt' => 'Termos de uso', 'de' => 'Nutzungsbedingungen',
+		),
 		'footer.droits'       => array(
 			'fr' => 'Tous droits réservés.', 'en' => 'All rights reserved.', 'it' => 'Tutti i diritti riservati.',
 			'es' => 'Todos los derechos reservados.', 'pt' => 'Todos os direitos reservados.', 'de' => 'Alle Rechte vorbehalten.',
